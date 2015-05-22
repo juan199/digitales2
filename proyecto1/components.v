@@ -52,6 +52,7 @@ module clock_recovery(
 endmodule
 
 module K285DET(
+	input wire TRANSCLK,
 	input wire [9:0] data_in,
 	output reg SYMBOL_CLK,
 	output reg RXVALID
@@ -65,10 +66,23 @@ module status(
 	input wire       SKP_REMOVED,
 	input wire       DECODE_ERROR,
 	input wire       DISPARITY_ERROR,
+	input wire       RXDET_O,
 	output reg [2:0] RXSTATUS
 );
 
 endmodule
+
+module power_manager(
+	input wire REFCLK,
+	input wire [1:0] PWRDDWN,
+	input wire RXDET_LOOPB, 
+	input wire RXDET_O,
+	output reg INTERCLK,
+	output reg TRANSCLK,
+	output reg DATALOOP,
+	output reg TXIDLE, 
+	output reg PHYSTATUS
+);
 
 
 

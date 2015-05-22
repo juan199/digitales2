@@ -1,72 +1,72 @@
 Module name          |   Engineer in charge   |    check list
 ====================================================================
 TX_I_O               |   Guille               |  definition:   yes
-                     |                        |  working:      no
+ET: 3h               |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 RX_I_O               |   Guille               |  definition:   yes
-                     |                        |  working:      no
+ET: 4h               |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 clock_recovery       |   unassigned           |  definition:   yes
-                     |                        |  working:      no
+ET: 15h              |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 K285DET              |   unassigned           |  definition:   yes
-                     |                        |  working:      no
+ET: 5h               |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 status               |   unassigned           |  definition:   yes
-                     |                        |  working:      no
+ET: 4h               |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 encoder              |   Sebas                |  definition:   yes
-                     |                        |  working:      no
+ET: 5h               |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 decoder              |   Sebas                |  definition:   yes
-                     |                        |  working:      no
+ET: 15h              |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 par2ser              |   Nano                 |  definition:   yes
-                     |                        |  working:      yes
+ET: 4h               |                        |  working:      yes
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 ser2par              |   Nano                 |  definition:   yes
-                     |                        |  working:      yes
+ET: 4h               |                        |  working:      yes
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 elastic_buffer       |   unassigned           |  definition:   yes
-                     |                        |  working:      no
+ET: 25h              |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
-K285DET              |   unassigned           |  definition:   yes
-                     |                        |  working:      no
+power_manager        |   unassigned           |  definition:   yes
+ET: 10h              |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 transmitter          |   unassigned           |  definition:   no
-                     |                        |  working:      no
+ET: 20h              |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 receiver             |   unassigned           |  definition:   no
-                     |                        |  working:      no
+ET: 25h              |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
-power_manager        |   unassigned           |  definition:   no
-                     |                        |  working:      no
+PIPE                 |   unassigned           |  definition:   no
+ET: 25h              |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
@@ -74,6 +74,41 @@ power_manager        |   unassigned           |  definition:   no
 
 
 
+Transmitter dependence list
+module               |     Status         |  Time to "Ready to use"
+===================================================================
+encode               |   working          |         5
+par2ser              |   working          |         4
+TX_I_O               |   working          |         3
+transmitter          |   no initiated     |        20
+-------------------------------------------------------------------
+                         Total remaining  |        22  
+ 
+
+Receiver dependence list
+module               |     Status         |  Time to "Ready to use"
+===================================================================
+RX_I_O               |   working          |         4
+ser2par	             |   working          |         4
+elastic_buffer       |   working          |        25
+decoder              |   working          |        15
+status               |   no initiated     |         4
+clock_recovery       |   no initiated     |        15
+K285DET              |   no initiated     |         5
+receiver             |   no initiated     |        25
+-------------------------------------------------------------------
+                         Total remaining  |        97
+                         
+PIPE dependence list
+module               |     Status         |  Time to "Ready to use"
+===================================================================
+transmitter          |   working          |         22
+receiver             |   working          |         97
+power_manager        |   working          |         10
+PIPE                 |   working          |         25
+-------------------------------------------------------------------
+                         Total remaining  |        154
+                           
 
 
 

@@ -11,7 +11,7 @@ endmodule
 module ser2par(
 	input wire       CRC_CKL,
 	input wire       data_in,
-	input wire       RXPOL,     // changes data polarity (I don't really know what that means....)
+	input wire       RXPOL,     // changes data polarity. RXPOL = 0 introduces data as it comes. RXPOL = 1 introduces data negated. 
 	output reg [9:0] data_out
 );
 
