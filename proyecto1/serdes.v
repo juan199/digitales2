@@ -1,4 +1,23 @@
 
+module par2ser(
+	input wire       TRANSCLK,
+	input wire [9:0] data_in,
+	output reg       data_out
+);
+
+endmodule
+
+
+module ser2par(
+	input wire       CRC_CKL,
+	input wire       data_in,
+	input wire       RXPOL,     // changes data polarity (I don't really know what that means....)
+	output reg [9:0] data_out
+);
+
+endmodule
+
+
 // Si los datos del stream se deben de enviar en un flanco de reloj, se debe crear un reloj 10 veces mas rapido para enviar y recibir el dato
 // de 10 bits a tiempo, si los datos se envia con cada clockazo del reloj general no hay que hacer modificaciones....
 
