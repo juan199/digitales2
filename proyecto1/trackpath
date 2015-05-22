@@ -65,6 +65,11 @@ receiver             |   unassigned           |  definition:   no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
+power_manager        |   unassigned           |  definition:   no
+                     |                        |  working:      no
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
 
 
 
