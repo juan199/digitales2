@@ -1,0 +1,93 @@
+Module name          |   Engineer in charge   |    check list
+====================================================================
+TX_I_O               |   Guille               |  definition:   yes
+                     |                        |  working:      no
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+RX_I_O               |   Guille               |  definition:   yes
+                     |                        |  working:      no
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+clock_recovery       |   unassigned           |  definition:   yes
+                     |                        |  working:      no
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+K285DET              |   unassigned           |  definition:   yes
+                     |                        |  working:      no
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+status               |   unassigned           |  definition:   yes
+                     |                        |  working:      no
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+encoder              |   Sebas                |  definition:   yes
+                     |                        |  working:      no
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+decoder              |   Sebas                |  definition:   yes
+                     |                        |  working:      no
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+par2ser              |   Nano                 |  definition:   yes
+                     |                        |  working:      yes
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+ser2par              |   Nano                 |  definition:   yes
+                     |                        |  working:      yes
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+elastic_buffer       |   unassigned           |  definition:   yes
+                     |                        |  working:      no
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+K285DET              |   unassigned           |  definition:   yes
+                     |                        |  working:      no
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+transmitter          |   unassigned           |  definition:   no
+                     |                        |  working:      no
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+receiver             |   unassigned           |  definition:   no
+                     |                        |  working:      no
+                     |                        |  testing:      no
+                     |                        |  ready to use: no
+---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     
