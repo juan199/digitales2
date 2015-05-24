@@ -37,12 +37,12 @@ ET: 15h              |                        |  working:      no
 ---------------------------------------------------------------------
 par2ser              |   Nano                 |  definition:   yes
 ET: 4h               |                        |  working:      yes
-                     |                        |  testing:      no
+                     |                        |  testing:      yes
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 ser2par              |   Nano                 |  definition:   yes
 ET: 4h               |                        |  working:      yes
-                     |                        |  testing:      no
+                     |                        |  testing:      yes
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 elastic_buffer       |   unassigned           |  definition:   yes
