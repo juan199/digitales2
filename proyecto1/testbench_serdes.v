@@ -33,16 +33,19 @@ begin
 	#1	INP_SER = 1;
 	
 	
-	#1500 NEG =0;
+	#1500 NEG =1;
 
 
 		//#30;
 		//INP_PAR = 0;
 		//#100;
-		//for(i = 0; i < 17; i = i+1)
-		//begin 
-		//#15 INP_SER = INP_SER +1;
-		//end
+		for(i = 0; i < 100; i = i+1)
+		begin 
+		#7 INP_SER = INP_SER +1;
+		//#5 INP_PAR = INP_PAR+1;
+		end
+		
+
     
    #1000 $finish;
 end
