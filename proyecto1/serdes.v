@@ -9,7 +9,7 @@ module par2ser(
     integer contps;
     
     initial
-    contps = 0;
+    contps = 10;
     
 always @(posedge TRANSCLK) begin
 

@@ -25,7 +25,7 @@ module testbench;
 initial
 begin
 
-	$dumpfile("test_dump_serdes.v");
+	$dumpfile("serdes_dump.vco");
 	$dumpvars;
 
 	#1	NEG =1;
