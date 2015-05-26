@@ -1,3 +1,7 @@
+`default_nettype none
+`timescale 1ns/100ps
+
+// Banco de flip-flops
 module FFD_POSEDGE #( parameter SIZE = 8) (
 	input wire                clock,
 	input wire [SIZE - 1 : 0] D,
@@ -9,6 +13,7 @@ module FFD_POSEDGE #( parameter SIZE = 8) (
 		
 endmodule
 
+// Mux de 2 a 1
 
 module mux2to1 #( parameter SIZE = 10) (
 	input wire                 select,
@@ -21,6 +26,8 @@ module mux2to1 #( parameter SIZE = 10) (
 	
 endmodule
 
+// Sub-bloque eléctrico del transmisor
+
 module TX_I_O(
 	input wire TRANSCLK,
 	input wire data,
@@ -31,7 +38,28 @@ module TX_I_O(
 	output reg TX_N
 );
 
+	reg tmp;
+
+	always @ (posedge TRANSCLK)
+	begin
+		tmp = $random;
+		if(TXIDLE)
+			begin
+			TX_P <= 1'b1;
+			TX_N <= 1'b1;
+			end
+		else
+			begin
+			TX_P <= data;
+			TX_N <= ~data;
+			end	
+		
+		RXDET_O <= #7 RXDET & tmp;
+	end
+
 endmodule
+
+// Sub-bloque eléctrico del receptor
 
 module RX_I_O(
 	input wire RX_P,
@@ -39,6 +67,16 @@ module RX_I_O(
 	output reg RXIDLE,
 	output reg data_out
 );
+
+	always @ (RX_P or RX_N)
+	begin
+		data_out <= RX_P;
+		
+		if(RX_P == RX_N)
+			RXIDLE <= 1'b1;
+		else
+			RXIDLE <= 1'b0;
+	end
 
 endmodule
 
@@ -71,19 +109,5 @@ module status(
 );
 
 endmodule
-
-module power_manager(
-	input wire REFCLK,
-	input wire [1:0] PWRDDWN,
-	input wire RXDET_LOOPB, 
-	input wire RXDET_O,
-	output reg INTERCLK,
-	output reg TRANSCLK,
-	output reg DATALOOP,
-	output reg TXIDLE, 
-	output reg PHYSTATUS
-);
-
-
 
 
