@@ -2,7 +2,7 @@
 
 `timescale 1ns / 1ps
 
-module encoder (
+module Encoder (
 	input wire 	 Reset,
 	input wire       INTERCLK,  // Internal clock
 	input wire [7:0] iData,     // Data input
