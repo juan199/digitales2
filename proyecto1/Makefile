@@ -8,6 +8,9 @@ electrical:
 	vvp electrical.vvp
 	gtkwave testbench/electrical_wave.gtkw &
 	
+transmitter:
+	iverilog components.v coder.v serdes.v transmitter.v -o transmitter.vvp
+	
 clean:
 	rm *.vvp
 	rm *.vco

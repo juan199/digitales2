@@ -1,14 +1,14 @@
 Module name          |   Engineer in charge   |    check list
 ====================================================================
 TX_I_O               |   Guille               |  definition:   yes
-ET: 3h               |                        |  working:      no
-                     |                        |  testing:      no
-                     |                        |  ready to use: no
+ET: 3h               |                        |  working:      yes
+                     |                        |  testing:      yes
+                     |                        |  ready to use: yes
 ---------------------------------------------------------------------
 RX_I_O               |   Guille               |  definition:   yes
-ET: 4h               |                        |  working:      no
-                     |                        |  testing:      no
-                     |                        |  ready to use: no
+ET: 4h               |                        |  working:      yes
+                     |                        |  testing:      yes
+                     |                        |  ready to use: yes
 ---------------------------------------------------------------------
 clock_recovery       |   unassigned           |  definition:   yes
 ET: 15h              |                        |  working:      no
@@ -38,12 +38,12 @@ ET: 15h              |                        |  working:      no
 par2ser              |   Nano                 |  definition:   yes
 ET: 4h               |                        |  working:      yes
                      |                        |  testing:      yes
-                     |                        |  ready to use: no
+                     |                        |  ready to use: yes
 ---------------------------------------------------------------------
 ser2par              |   Nano                 |  definition:   yes
 ET: 4h               |                        |  working:      yes
                      |                        |  testing:      yes
-                     |                        |  ready to use: no
+                     |                        |  ready to use: yes
 ---------------------------------------------------------------------
 elastic_buffer       |   unassigned           |  definition:   yes
 ET: 25h              |                        |  working:      no
@@ -55,8 +55,8 @@ ET: 10h              |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
-transmitter          |   unassigned           |  definition:   no
-ET: 20h              |                        |  working:      no
+transmitter          |   unassigned           |  definition:   yes
+ET: 20h              |                        |  working:      yes
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
@@ -77,19 +77,19 @@ ET: 25h              |                        |  working:      no
 Transmitter dependence list
 module               |     Status         |  Time to "Ready to use"
 ===================================================================
-encode               |   working          |         5
-par2ser              |   working          |         4
-TX_I_O               |   working          |         3
-transmitter          |   no initiated     |        20
+encode               |   working          |         0
+par2ser              |   working          |         0
+TX_I_O               |   working          |         0
+transmitter          |   no initiated     |         5
 -------------------------------------------------------------------
-                         Total remaining  |        22  
+                         Total remaining  |         5  
  
 
 Receiver dependence list
 module               |     Status         |  Time to "Ready to use"
 ===================================================================
-RX_I_O               |   working          |         4
-ser2par	             |   working          |         4
+RX_I_O               |   working          |         0
+ser2par	             |   working          |         0
 elastic_buffer       |   working          |        25
 decoder              |   working          |        15
 status               |   no initiated     |         4
@@ -97,17 +97,17 @@ clock_recovery       |   no initiated     |        15
 K285DET              |   no initiated     |         5
 receiver             |   no initiated     |        25
 -------------------------------------------------------------------
-                         Total remaining  |        97
+                         Total remaining  |        89
                          
 PIPE dependence list
 module               |     Status         |  Time to "Ready to use"
 ===================================================================
-transmitter          |   working          |         22
-receiver             |   working          |         97
+transmitter          |   working          |          5
+receiver             |   working          |         89
 power_manager        |   working          |         10
 PIPE                 |   working          |         25
 -------------------------------------------------------------------
-                         Total remaining  |        154
+                         Total remaining  |        129
                            
 
 
