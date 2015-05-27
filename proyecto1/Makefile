@@ -3,6 +3,14 @@ serdes:
 	vvp serdes.vvp
 	gtkwave testbench/serdes_wave.gtkw &
 	
+electrical:
+	iverilog components.v testbench/XI_O.v -o electrical.vvp
+	vvp electrical.vvp
+	gtkwave testbench/electrical_wave.gtkw &
+	
+transmitter:
+	iverilog components.v coder.v serdes.v transmitter.v -o transmitter.vvp
+	
 clean:
 	rm *.vvp
 	rm *.vco

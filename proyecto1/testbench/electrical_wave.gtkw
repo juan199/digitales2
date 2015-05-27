@@ -1,0 +1,43 @@
+[*]
+[*] GTKWave Analyzer v3.3.58 (w)1999-2014 BSI
+[*] Tue May 26 20:39:50 2015
+[*]
+[dumpfile] "/home/guillermo/development/digitales2/proyecto1/XI_O_dump.vco"
+[dumpfile_mtime] "Tue May 26 20:34:47 2015"
+[dumpfile_size] 4132
+[savefile] "/home/guillermo/development/digitales2/proyecto1/testbench/electrical_wave.gtkw"
+[timestart] 0
+[size] 1280 776
+[pos] -1 -1
+*-17.007717 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[sst_width] 223
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 222
+@28
+testbench.clock
+@200
+-data
+@28
+testbench.trans.data
+testbench.rec.data_out
+@200
+-control
+@28
+testbench.trans.RXDET
+testbench.trans.RXDET_O
+testbench.trans.TXIDLE
+testbench.rec.RXIDLE
+@200
+-TX_differential
+@28
+testbench.trans.TX_P
+testbench.trans.TX_N
+@200
+-RX_differential
+@28
+testbench.rec.RX_P
+testbench.rec.RX_N
+[pattern_trace] 1
+[pattern_trace] 0
