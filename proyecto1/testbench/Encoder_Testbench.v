@@ -1,3 +1,4 @@
+`include "coder.v" 
 module test;
 	reg Reset;
 	reg Clk;
