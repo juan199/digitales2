@@ -26,6 +26,24 @@ module mux2to1 #( parameter SIZE = 10) (
 	
 endmodule
 
+// contador hacia arriba
+
+module UP_COUNTER #( parameter INIT_VALUE ) (
+	input wire       Reset,
+	input wire       clock,
+	output reg [3:0] Q
+);
+
+	always @ (posedge clock)
+	begin
+		if(Reset)
+			Q = INIT_VALUE;
+		else
+			Q = Q + 1;
+	end
+	
+endmodule
+
 // Sub-bloque eléctrico del transmisor
 
 module TX_I_O(
