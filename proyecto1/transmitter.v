@@ -1,5 +1,8 @@
+`default_nettype none
+`timescale 1ns/100ps
 
 module transmitter(
+    input wire       Reset,
 	input wire       TXCLK,
 	input wire       INTERCLK,
 	input wire       TRANSCLK,
@@ -32,6 +35,7 @@ FFD_POSEDGE #(8) tx_register(
 );
 
 encoder tx_encoder(
+            .Reset(Reset),
             .INTERCLK(INTERCLK),
             .iData(encoder_in),
             .TXDATAK(TXDATAK),

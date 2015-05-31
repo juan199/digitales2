@@ -28,7 +28,7 @@ endmodule
 
 // contador hacia arriba
 
-module UP_COUNTER #( parameter INIT_VALUE ) (
+module UP_COUNTER #( parameter INIT_VALUE = 4'b0) (
 	input wire       Reset,
 	input wire       clock,
 	output reg [3:0] Q

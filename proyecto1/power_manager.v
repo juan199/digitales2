@@ -1,19 +1,30 @@
+`default_nettype none
 `timescale 1ns/100ps
 
-module clock(reloj);
-
-  output reloj;
-  reg reloj;
+// 250 MHz -> 4 ns
+// 2.5 GHz -> 0.4 ns
+module inter_clock(
+		 output reg clock
+);
   
-  initial #3 reloj = 0;
+  initial 
+      clock = 1'b1;
 	
   always
-  
-  if (reloj)
-   #15 reloj = 0;
-   else
-   #15 reloj =1;
+      #(4) clock = ~clock;
+      
+endmodule
 
+module trans_clock(
+		 output reg clock
+);
+  
+  initial 
+      clock = 1'b1;
+	
+  always
+      #(0.4) clock = ~clock;
+      
 endmodule
 
 

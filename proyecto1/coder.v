@@ -1,9 +1,10 @@
 // El proceso de codificación (encoder module) puede tomar más de un ciclo, pero no el de decodificación (decoder module)
 
-`timescale 1ns / 1ps
+`default_nettype none
+`timescale 1ns/100ps
 
 module encoder (
-	input wire 	 Reset,
+	input wire       Reset,
 	input wire       INTERCLK,  // Internal clock
 	input wire [7:0] iData,     // Data input
 	input wire       TXDATAK,   // 1 = control byte. 0 = data byte
@@ -204,10 +205,6 @@ module encoder (
 		end
 	end
 	 
-endmodule
-
-
-
 endmodule
 
 

@@ -1,3 +1,5 @@
+`default_nettype none
+`timescale 1ns/100ps
 
 module par2ser(
 	input wire       TRANSCLK,

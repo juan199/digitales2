@@ -15,7 +15,7 @@ ET: 15h              |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
-K285DET              |   unassigned           |  definition:   yes
+K285DET              |   Nano                 |  definition:   yes
 ET: 5h               |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
@@ -26,9 +26,9 @@ ET: 4h               |                        |  working:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 encoder              |   Sebas                |  definition:   yes
-ET: 5h               |                        |  working:      no
-                     |                        |  testing:      no
-                     |                        |  ready to use: no
+ET: 5h               |                        |  working:      yes
+                     |                        |  testing:      yes
+                     |                        |  ready to use: yes
 ---------------------------------------------------------------------
 decoder              |   Sebas                |  definition:   yes
 ET: 15h              |                        |  working:      no
@@ -57,7 +57,7 @@ ET: 10h              |                        |  working:      no
 ---------------------------------------------------------------------
 transmitter          |   unassigned           |  definition:   yes
 ET: 20h              |                        |  working:      yes
-                     |                        |  testing:      no
+                     |                        |  testing:      yes
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 receiver             |   unassigned           |  definition:   no
@@ -80,7 +80,7 @@ module               |     Status         |  Time to "Ready to use"
 encode               |   working          |         0
 par2ser              |   working          |         0
 TX_I_O               |   working          |         0
-transmitter          |   no initiated     |         5
+transmitter          |   working          |         5
 -------------------------------------------------------------------
                          Total remaining  |         5  
  
