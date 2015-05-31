@@ -16,7 +16,7 @@ ET: 15h              |                        |  working:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 K285DET              |   Nano                 |  definition:   yes
-ET: 5h               |                        |  working:      no
+ET: 5h               |                        |  working:      yes
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
@@ -28,7 +28,7 @@ ET: 4h               |                        |  working:      no
 encoder              |   Sebas                |  definition:   yes
 ET: 5h               |                        |  working:      yes
                      |                        |  testing:      yes
-                     |                        |  ready to use: yes
+                     |                        |  ready to use: no
 ---------------------------------------------------------------------
 decoder              |   Sebas                |  definition:   yes
 ET: 15h              |                        |  working:      no
@@ -77,7 +77,7 @@ ET: 25h              |                        |  working:      no
 Transmitter dependence list
 module               |     Status         |  Time to "Ready to use"
 ===================================================================
-encode               |   working          |         0
+encode               |   working          |         ?
 par2ser              |   working          |         0
 TX_I_O               |   working          |         0
 transmitter          |   working          |         5
@@ -94,7 +94,7 @@ elastic_buffer       |   working          |        25
 decoder              |   working          |        15
 status               |   no initiated     |         4
 clock_recovery       |   no initiated     |        15
-K285DET              |   no initiated     |         5
+K285DET              |   working          |         5
 receiver             |   no initiated     |        25
 -------------------------------------------------------------------
                          Total remaining  |        89
