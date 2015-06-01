@@ -28,7 +28,7 @@ module test;
 		S5 = 0;
 		TXCOMP = 0;
 		Reset = 0;
-		$dumpfile("senales.vcd");
+		$dumpfile("encoder_dump.vco");
 		$dumpvars;
 		#4 Reset = 1;
 		#6 Reset = 0;
