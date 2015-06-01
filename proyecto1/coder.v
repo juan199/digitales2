@@ -1,10 +1,8 @@
-// El proceso de codificación (encoder module) puede tomar más de un ciclo, pero no el de decodificación (decoder module)
-
 `default_nettype none
 `timescale 1ns/100ps
 
-module encoder (
-	input wire       Reset,
+module Encoder (
+	input wire 		 Reset,
 	input wire       INTERCLK,  // Internal clock
 	input wire [7:0] iData,     // Data input
 	input wire       TXDATAK,   // 1 = control byte. 0 = data byte
@@ -41,7 +39,7 @@ module encoder (
 	wire L21 = ~A & B & C | A & ~B & C | A & B & ~C;
 	
 	//Special case
-	wire S = L21 & D & ~E & PDFS6 | L12 & ~D & E & NDFS6;
+	wire S = L21 & D & ~E & ~PBRD | L12 & ~D & E & PBRD;
 	
 	//-----------------------------------------------------------------
 	
@@ -84,11 +82,38 @@ module encoder (
 	//-----------------------------------------------------------------
 	
 	//Complement signals
-	/*If the input required disparity is the same as the previous 
-	required disparity, invert the input to guarantee a balanced 
+	/*If the 6 bit coded input required disparity is the same as the previous 
+	block required disparity, invert the input to guarantee a balanced 
 	output.*/
-	wire CMPLS6 = PDFS4 & PDRS6 | NDFS4 & NDRS6;
-	wire CMPLS4 = (PDFS6 & PDRS4 | NDFS6 & NDRS4)& ~CMPLS6;
+	wire CMPLS6 = PBRD & PDRS6 | ~PBRD & NDRS6;
+	
+	//Exception for disparity rules: if input = D7.x and the 4 bit coded 
+	//input has a non neutral required disparity
+	wire DispException = L30 & ~D & ~E & (PDRS4 | NDRS4);
+	
+	/*Normal way of complementing S4: 0 for neutral, - for negative, + 
+	for positive
+	 _____________________
+	 | PBRD | DRS6 | DRS4 |
+	 |------|------|------|
+	 |  -   |   0  |  -   |
+	 |------|------|------|
+	 |  -   |   -  |  +   |
+	 |------|------|------|
+	 |  -   |   +  |  +   |
+	 |------|------|------|
+	 |  +   |   0  |  +   |
+	 |------|------|------|
+	 |  +   |   -  |  -   |
+	 |------|------|------|
+	 |  +   |   +  |  -   |
+	 ~~~~~~~~~~~~~~~~~~~~~~
+	*/
+	wire cmpls4 = ~PBRD &((~NDRS6 & ~PDRS6 & NDRS4) | ((NDRS6 | PDRS6) & PDRS4))| PBRD &((~NDRS6 & ~PDRS6 & PDRS4) | ((NDRS6 | PDRS6) & NDRS4));
+	
+	//Complement S4  if the disparity exception is different from the 
+	//normal way  
+	wire CMPLS4 = DispException ^ cmpls4;
 	
 	//If the S6 complement signal is asserted, invert the letter
 	wire oa = CMPLS6 ^ a;
@@ -111,34 +136,61 @@ module encoder (
 	//The 3 bit vector is encoded in a 4 bit vector
 	wire [3:0] oS4;
 	assign oS4 = {of,og,oh,oj};
+	
+	//Output 10 bit coded vector
+	wire [9:0] S10; 
+	assign S10 = {oS6,oS4};
+	
+	//Force complementation
+	wire [9:0] oS10; 
+	assign oS10 = (TXCOMP)? ~S10:S10;
 
 /*----------------------------------------------------------------------
 					Sequential section
 ----------------------------------------------------------------------*/
 	
 	
-	//Previous Required Disparity
-	//for S4
-	reg PDFS4; //positive (disparity in front of S4)
-	reg NDFS4; //negative (disparity in front of S4)
-	//for S6
-	reg PDFS6; //positive (disparity in front of S6)
-	reg NDFS6; //negative (disparity in front of S6)
+	//Previous Block Required Disparity
+	reg PBRD;
+	//Current Block Required Disparity
+	reg CBRD;
+
 //---------------------------------------------------------------------//
 	always @(posedge INTERCLK)
 	begin
+		//Update previous block required disparity
+		PBRD <= CBRD;
+		
 		if(~Reset)
 		begin
 			//Update the final 10 bit encoded Data vector
-			oData <= {oS6,oS4};
-			
-			//If the required disparity of the 4 bit coded input is neutral,... 
-			if (PDRS4 == NDRS4)
+			oData <= oS10;
+		end
+		
+		//------------------------------------------------------------//
+		
+		else
+		begin
+			//Output reset
+			oData <= 10'b0;
+			//Starting previous required disparity
+			CBRD <= 0; //negative
+
+		end
+	end
+//--------------------------------------------------------------------//	
+
+	always @(negedge INTERCLK)
+	begin
+		if(~Reset)
+		begin
+			//If the required disparity of both 4 and 6 bit coded inputs 
+			//are neutral,... 
+			if (PDRS4 == NDRS4 && PDRS6 == NDRS6)
 			begin
-				/*...the previous required disparity seen by the 6 bit vector 
-				remains the same */
-				PDFS6 <= PDFS6;
-				NDFS6 <= NDFS6;
+				//...the current block required disparity remains the 
+				//same 
+				CBRD <= CBRD;
 			end
 			
 			//---------------------------------//
@@ -146,10 +198,9 @@ module encoder (
 			//else...
 			else 
 			begin
-				/* The 4 bit vector required disparity is now the previous 
-				disparity seen by the 6 bit vector */
-				PDFS6 <= PDRS4;
-				NDFS6 <= NDRS4;
+				//...the current block required disparity must be the opposite 
+				//of the previous one 
+				CBRD <= ~PBRD;
 			end
 		end
 		
@@ -160,48 +211,8 @@ module encoder (
 			//Output reset
 			oData <= 10'b0;
 			//Starting previous required disparity
-			PDFS6 <= 0;
-			PDFS4 <= 0;
-			NDFS6 <= 1;
-			NDFS4 <= 1;
-		end
-	end
-//--------------------------------------------------------------------//	
-	always @(negedge INTERCLK)
-	begin
-		if(~Reset)
-		begin
-			//If the required disparity of the 6 bit coded input is neutral,... 
-			if (PDRS6 == NDRS6)
-			begin
-				//...the previous required disparity seen by the 4 bit vector 
-				//remains the same
-				PDFS4 <= PDFS4;
-				NDFS4 <= NDFS4;
-			end
-			
-			//---------------------------------//
-			
-			else 
-			begin
-				// The 6 bit vector required disparity is now the previous 
-				// disparity seen by the 4 bit vector
-				PDFS4 <= PDRS6;
-				NDFS4 <= NDRS6;
-			end
-		end	
-		
-		//------------------------------------------------------------//
-			
-		else
-		begin
-			//Output reset
-			oData <= 10'b0;
-			//Starting previous required disparity
-			PDFS6 <= 0;
-			PDFS4 <= 0;
-			NDFS6 <= 1;
-			NDFS4 <= 1;
+			CBRD <= 0; //negative
+
 		end
 	end
 	 
