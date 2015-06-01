@@ -6,7 +6,7 @@ module Encoder (
 	input wire       INTERCLK,  // Internal clock
 	input wire [7:0] iData,     // Data input
 	input wire       TXDATAK,   // 1 = control byte. 0 = data byte
-	input wire       TXCOMP,    // 1 = running disparity negative. 0 = running disparity positive
+	input wire       TXCOMP,    // 1 = SET running disparity negative. 0 = nothing happens
 	output reg [9:0] oData      // Data output
 	);
 		 
@@ -141,10 +141,10 @@ module Encoder (
 	wire [9:0] S10; 
 	assign S10 = {oS6,oS4};
 	
-	//Force complementation
-	wire [9:0] oS10; 
-	assign oS10 = (TXCOMP)? ~S10:S10;
-
+	//Set Current block required disparity  
+	/*wire [9:0] oS10; 
+	assign oS10 = (TXCOMP & CBRD)? ~S10:S10;
+*/
 /*----------------------------------------------------------------------
 					Sequential section
 ----------------------------------------------------------------------*/
@@ -159,12 +159,15 @@ module Encoder (
 	always @(posedge INTERCLK)
 	begin
 		//Update previous block required disparity
-		PBRD <= CBRD;
-		
+		if (TXCOMP)
+			PBRD <= 1; //Set negative CBRD 	
+		else
+			PBRD <= CBRD; //Normal case
+			
 		if(~Reset)
 		begin
 			//Update the final 10 bit encoded Data vector
-			oData <= oS10;
+			oData <= S10;
 		end
 		
 		//------------------------------------------------------------//

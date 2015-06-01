@@ -1,0 +1,53 @@
+[*]
+[*] GTKWave Analyzer v3.3.58 (w)1999-2014 BSI
+[*] Mon Jun  1 16:23:25 2015
+[*]
+[dumpfile] "/home/sebas/Documents/GIT/digitales2/proyecto1/encoder_dump.vco"
+[dumpfile_mtime] "Mon Jun  1 16:12:08 2015"
+[dumpfile_size] 12170
+[savefile] "/home/sebas/Documents/GIT/digitales2/proyecto1/testbench/encoder_wave.gtkw"
+[timestart] 35680
+[size] 1254 600
+[pos] -1 -1
+*-12.000000 36470 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] test.
+[sst_width] 223
+[signals_width] 166
+[sst_expanded] 1
+[sst_vpaned_height] 160
+@28
+test.Clk
+test.Reset
+@200
+-K/Dx.y 
+@28
+test.k
+@24
+test.S5[4:0]
+test.S3[2:0]
+@200
+-Coded S5
+@28
+test.Enc.oS6[5:0]
+@200
+-Coded S3
+@28
+test.Enc.oS4[3:0]
+@200
+-Output 
+@22
+test.EncData[9:0]
+@200
+-Set negative RD
+@28
+test.TXCOMP
+@200
+-Current Block RD
+@28
+test.Enc.CBRD
+@200
+-Previous Block RD
+@28
+test.Enc.PBRD
+[pattern_trace] 1
+[pattern_trace] 0

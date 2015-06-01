@@ -1,3 +1,7 @@
+encoder:
+	iverilog coder.v testbench/Encoder_Testbench.v -o encoder.vvp
+	vvp encoder.vvp
+	gtkwave testbench/encoder_wave.gtkw &
 serdes:
 	iverilog serdes.v power_manager.v testbench/serdes_testbench.v -o serdes.vvp
 	vvp serdes.vvp

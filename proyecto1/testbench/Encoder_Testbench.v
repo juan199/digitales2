@@ -1,4 +1,4 @@
-`include "coder.v" 
+
 module test;
 	reg Reset;
 	reg Clk;
@@ -42,7 +42,9 @@ module test;
 		#8 S3 = 2;
 		#8 S3 = 3;
 		#8 S3 = 4;
-		#8 S3 = 5;
+		TXCOMP = 1;
+		#4 TXCOMP = 0;
+		#4 S3 = 5;
 		#8 S3 = 6;
 		#8 S3 = 7;
 		//K23.7
