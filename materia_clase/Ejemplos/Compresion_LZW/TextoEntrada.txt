@@ -1,0 +1,8 @@
+----BOF----
+Este es un texto para ver que se puede hacer con este acrhivo.
+Segunda línea.
+Tercera linea***
+El "write" no acepta tildes...
+
+Arriba hay una linea vacía
+----EOF----

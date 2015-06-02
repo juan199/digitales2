@@ -1,0 +1,21 @@
+*-3.995045 6 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+@28
++reloj BancoPruebas.reloj
+BancoPruebas.reset
++div/mult BancoPruebas.div_mult
++done BancoPruebas.done
++go BancoPruebas.go
+@22
++entrada_16 BancoPruebas.ent_16[15:0]
++entrada_32 BancoPruebas.ent_32[31:0]
++salida BancoPruebas.cascaron_0.result[31:0]
++salida_ideal BancoPruebas.sal_32_ideal[31:0]
+@24
++PC BancoPruebas.cascaron_0.control_uProg.prox_direccion_reset[4:0]
+@23
++IR BancoPruebas.cascaron_0.control_uProg.instruccion[26:0]
+@22
++A BancoPruebas.cascaron_0.sal_A[15:0]
++B BancoPruebas.cascaron_0.sal_B[15:0]
++C BancoPruebas.cascaron_0.sal_C[31:0]
++D_(cont) BancoPruebas.cascaron_0.sal_D[3:0]

@@ -1,0 +1,32 @@
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-16.745527 200000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+@28
+BancoPruebas.s
+BancoPruebas.r
+@200
+-
+@28
+BancoPruebas.Pr
+BancoPruebas.PrAs
+BancoPruebas.PrBf
+BancoPruebas.Blk
+BancoPruebas.BlkSn
+BancoPruebas.nBlk
+BancoPruebas.nBlkSn
+BancoPruebas.udp
+@200
+-
+@28
+BancoPruebas.qPrim
+BancoPruebas.qAs
+BancoPruebas.qPrBuf
+BancoPruebas.qBlk
+BancoPruebas.qBlkSn
+BancoPruebas.qnBlk
+BancoPruebas.qnBlkSn
+@29
+BancoPruebas.qUdp
+@28
+BancoPruebas.qPrim2

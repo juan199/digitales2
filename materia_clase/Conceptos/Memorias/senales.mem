@@ -1,0 +1,19 @@
+*-15.000000 2821800 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+@28
+tb.CLK
+tb.CS_N
+tb.RAS_N
+tb.CAS_N
+tb.WE_N
+tb.ADDR[12:0]
+tb.BA[1:0]
+@22
+tb.DQ[15:0]
+@28
+tb.DQS[1:0]
+tb.DM[1:0]
+@22
+tb.dq_in_neg[31:0]
+tb.dq_in_pos[31:0]
+tb.dq_fifo_W0[15:0]
+tb.dq_fifo_W1[15:0]

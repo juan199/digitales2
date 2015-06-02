@@ -1,0 +1,14 @@
+Pagina principal de Icarus Verilog (Version Linux)
+http://www.icarus.com/eda/verilog/
+
+Icarus verilog (Version Windows)
+http://bleyer.org/icarus/
+
+Este es el programa que se utiliza para visualizar los diagramas temporales de la simulacion:
+http://home.nc.rr.com/gtkwave/
+
+Esta pagina contiene una guia de referencia de Verilog bastante buena:
+www.sutherland-hdl.com
+
+Para correr GTkWave se necesita instalar GTK+2 que se puede encontrar aqui:
+http://gimp-win.sourceforge.net/stable.html

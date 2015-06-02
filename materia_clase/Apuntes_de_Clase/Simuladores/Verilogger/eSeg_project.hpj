@@ -1,0 +1,18 @@
+<!DOCTYPE SimulationProject SYSTEM "hdl-prj.dtd">
+<SimulationProject Logfile="verilog.log" Keyfile="..\..\..\..\..\..\..\VLOGGER\verilog.key" Language="Verilog" DelayType="typical" AddTopLevelSignals="1" FileNamesShown="1" HideEmptyLists="1" ShowWatch="1" DumpWatch="0" InteractiveMode="1" LanguageTemplate="C:\VLogger\templatefiles\diagram.v">
+  <DirList>
+    <Directory>C:\VLogger\</Directory>
+  </DirList>
+  <LibFileList>
+    <File>test_bToESeg.v</File>
+    <File>binaryToESeg.v</File>
+    <File>testBench.v</File>
+  </LibFileList>
+  <LibDirList>
+    <Directory>C:\VLogger\lib\verilog\</Directory>
+  </LibDirList>
+  <LibExtensionList>
+    <Extension>.v</Extension>
+    <Extension>.vo</Extension>
+  </LibExtensionList>
+</SimulationProject>

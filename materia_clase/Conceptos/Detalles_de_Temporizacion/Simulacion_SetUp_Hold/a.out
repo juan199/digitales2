@@ -1,0 +1,85 @@
+#! /usr/local/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7-25-ge162258)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x111ece0 .scope module, "testbench" "testbench" 2 52;
+ .timescale 0 0;
+v0x1131210_0 .net "d", 0 0, v0x111c540_0; 1 drivers
+v0x1131300_0 .net "g", 0 0, v0x1130a30_0; 1 drivers
+v0x11313d0_0 .net "q", 0 0, L_0x1131610; 1 drivers
+v0x1131450_0 .net "qb", 0 0, L_0x11314d0; 1 drivers
+S_0x1130af0 .scope module, "DL1" "DLatch" 2 56, 2 4, S_0x111ece0;
+ .timescale 0 0;
+P_0x1130be8 .param/l "Ta" 2 5, +C4<011>;
+P_0x1130c10 .param/l "Tb" 2 6, +C4<011>;
+P_0x1130c38 .param/l "Tbas" 2 7, +C4<011>;
+L_0x11314d0/d .functor NOR 1, L_0x11317c0, L_0x1131610, C4<0>, C4<0>;
+L_0x11314d0 .delay (3,3,3) L_0x11314d0/d;
+L_0x1131610/d .functor NOR 1, L_0x1131980, L_0x11314d0, C4<0>, C4<0>;
+L_0x1131610 .delay (3,3,3) L_0x1131610/d;
+L_0x11316d0/d .functor NOT 1, v0x111c540_0, C4<0>, C4<0>, C4<0>;
+L_0x11316d0 .delay (3,3,3) L_0x11316d0/d;
+L_0x11317c0/d .functor AND 1, v0x111c540_0, v0x1130a30_0, C4<1>, C4<1>;
+L_0x11317c0 .delay (3,3,3) L_0x11317c0/d;
+L_0x1131980/d .functor AND 1, L_0x11316d0, v0x1130a30_0, C4<1>, C4<1>;
+L_0x1131980 .delay (3,3,3) L_0x1131980/d;
+v0x1130db0_0 .alias "d", 0 0, v0x1131210_0;
+v0x1130e30_0 .net "db", 0 0, L_0x11316d0; 1 drivers
+v0x1130eb0_0 .alias "g", 0 0, v0x1131300_0;
+v0x1130f60_0 .alias "q", 0 0, v0x11313d0_0;
+v0x1131010_0 .alias "qb", 0 0, v0x1131450_0;
+v0x1131090_0 .net "r", 0 0, L_0x1131980; 1 drivers
+v0x1131170_0 .net "s", 0 0, L_0x11317c0; 1 drivers
+S_0x11307f0 .scope module, "GenHabLatch" "GenG" 2 58, 2 22, S_0x111ece0;
+ .timescale 0 0;
+P_0x11308e8 .param/l "TH" 2 23, +C4<01111>;
+P_0x1130910 .param/l "TL" 2 24, +C4<0101101>;
+v0x1130a30_0 .var "g", 0 0;
+S_0x111edd0 .scope module, "GenDato" "GenD" 2 59, 2 35, S_0x111ece0;
+ .timescale 0 0;
+P_0x111eec8 .param/l "TH" 2 36, +C4<011110>;
+P_0x111eef0 .param/l "TL" 2 37, +C4<01011010>;
+v0x111c540_0 .var "d", 0 0;
+    .scope S_0x11307f0;
+T_0 ;
+    %set/v v0x1130a30_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x11307f0;
+T_1 ;
+    %delay 45, 0;
+    %set/v v0x1130a30_0, 1, 1;
+    %delay 15, 0;
+    %set/v v0x1130a30_0, 0, 1;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x111edd0;
+T_2 ;
+    %set/v v0x111c540_0, 0, 1;
+    %end;
+    .thread T_2;
+    .scope S_0x111edd0;
+T_3 ;
+    %delay 90, 0;
+    %set/v v0x111c540_0, 1, 1;
+    %delay 30, 0;
+    %set/v v0x111c540_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x111c540_0, 0, 1;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_0x111ece0;
+T_4 ;
+    %vpi_call 2 64 "$dumpfile", "SetUp_Hold.vcd";
+    %vpi_call 2 65 "$dumpvars";
+    %delay 12000, 0;
+    %vpi_call 2 68 "$finish";
+    %end;
+    .thread T_4;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "SetupHold.v";

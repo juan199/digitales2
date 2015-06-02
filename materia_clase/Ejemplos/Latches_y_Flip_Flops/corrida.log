@@ -1,0 +1,452 @@
+VCD info: dumpfile gated_sr_ff.vcd opened for output.
+** - Cambio en s(1000)= 0 y r(1000)= 1.
+** - Salidas correctas q=0 y qb=1.
+                1040 ** - testbench.ff0 - Salidas q y qb son complementarias.
+                1041 ** - testbench.ff4 - Salidas q y qb son complementarias.
+                1041 ** - testbench.ff8 - Salidas q y qb son complementarias.
+                1086 ** - testbench.ff12 - Salidas q y qb son complementarias.
+                1086 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en s(2000)= 1.
+** - Salidas q y qb ambas a 0.
+                2020 ** - testbench.ff16 - Salidas q y qb son iguales.
+                2020 ** - testbench.ff8 - Salidas q y qb son iguales.
+                2020 ** - testbench.ff0 - Salidas q y qb son iguales.
+                2021 ** - testbench.ff4 - Salidas q y qb son iguales.
+                2066 ** - testbench.ff12 - Salidas q y qb son iguales.
+** - Cambio en r(3000)= 0.
+** - Salidas correctas q=1 y qb=0.
+                3020 ** - testbench.ff12 - Salidas q y qb son complementarias.
+                3020 ** - testbench.ff4 - Salidas q y qb son complementarias.
+                3020 ** - testbench.ff0 - Salidas q y qb son complementarias.
+                3021 ** - testbench.ff8 - Salidas q y qb son complementarias.
+                3066 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en s(4000)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en s(5000)= 1.
+** - Salidas correctas q=1 y qb=0.
+** - Cambio en r(6000)= 1.
+** - Salidas q y qb ambas a 0.
+                6020 ** - testbench.ff12 - Salidas q y qb son iguales.
+                6020 ** - testbench.ff4 - Salidas q y qb son iguales.
+                6020 ** - testbench.ff0 - Salidas q y qb son iguales.
+                6021 ** - testbench.ff8 - Salidas q y qb son iguales.
+                6066 ** - testbench.ff16 - Salidas q y qb son iguales.
+** - Cambio en s(7000)= 0.
+** - Salidas correctas q=0 y qb=1.
+                7020 ** - testbench.ff16 - Salidas q y qb son complementarias.
+                7020 ** - testbench.ff8 - Salidas q y qb son complementarias.
+                7020 ** - testbench.ff0 - Salidas q y qb son complementarias.
+                7021 ** - testbench.ff4 - Salidas q y qb son complementarias.
+                7066 ** - testbench.ff12 - Salidas q y qb son complementarias.
+** - Cambio en r(8000)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en s(10000)= 1 y r(10000)= 1.
+** - Salidas q y qb ambas a 0.
+               10020 ** - testbench.ff16 - Salidas q y qb son iguales.
+               10020 ** - testbench.ff8 - Salidas q y qb son iguales.
+               10020 ** - testbench.ff0 - Salidas q y qb son iguales.
+               10021 ** - testbench.ff4 - Salidas q y qb son iguales.
+               10066 ** - testbench.ff12 - Salidas q y qb son iguales.
+** - Cambio en s(11000)= 0 y r(11000)= 0.
+** - Salidas q y qb pueden oscilar.
+               11020 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               11020 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               11020 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               11020 ** - testbench.ff8 - Salidas q y qb son complementarias.
+** - Cambio en r(12000)= 1.
+** - Salidas correctas q=0 y qb=1.
+               12020 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               12020 ** - testbench.ff12 - Salidas q y qb son iguales.
+               12020 ** - testbench.ff4 - Salidas q y qb son iguales.
+               12041 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               12086 ** - testbench.ff12 - Salidas q y qb son complementarias.
+** - Cambio en s(13000)= 1 y r(13000)= 0.
+** - Salidas correctas q=1 y qb=0.
+               13020 ** - testbench.ff16 - Salidas q y qb son iguales.
+               13020 ** - testbench.ff8 - Salidas q y qb son iguales.
+               13020 ** - testbench.ff0 - Salidas q y qb son iguales.
+               13021 ** - testbench.ff4 - Salidas q y qb son iguales.
+               13040 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               13041 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               13041 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               13066 ** - testbench.ff12 - Salidas q y qb son iguales.
+               13086 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               13086 ** - testbench.ff12 - Salidas q y qb son complementarias.
+** - Cambio en s(14000)= 0 y r(14000)= 1.
+** - Salidas correctas q=0 y qb=1.
+               14020 ** - testbench.ff12 - Salidas q y qb son iguales.
+               14020 ** - testbench.ff4 - Salidas q y qb son iguales.
+               14020 ** - testbench.ff0 - Salidas q y qb son iguales.
+               14021 ** - testbench.ff8 - Salidas q y qb son iguales.
+               14040 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               14041 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               14041 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               14066 ** - testbench.ff16 - Salidas q y qb son iguales.
+               14086 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               14086 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en r(15000)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en s(17000)= 1 y r(17000)= 1.
+** - Salidas q y qb ambas a 0.
+               17020 ** - testbench.ff16 - Salidas q y qb son iguales.
+               17020 ** - testbench.ff8 - Salidas q y qb son iguales.
+               17020 ** - testbench.ff0 - Salidas q y qb son iguales.
+               17021 ** - testbench.ff4 - Salidas q y qb son iguales.
+               17066 ** - testbench.ff12 - Salidas q y qb son iguales.
+** - Cambio en s(18000)= 0 y r(18000)= 0.
+** - Salidas q y qb pueden oscilar.
+               18020 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               18020 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               18020 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               18020 ** - testbench.ff8 - Salidas q y qb son complementarias.
+** - Cambio en s(19000)= 1.
+** - Salidas correctas q=1 y qb=0.
+               19020 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               19020 ** - testbench.ff16 - Salidas q y qb son iguales.
+               19020 ** - testbench.ff8 - Salidas q y qb son iguales.
+               19041 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               19086 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en s(20000)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en r(21000)= 1.
+** - Salidas correctas q=0 y qb=1.
+               21020 ** - testbench.ff12 - Salidas q y qb son iguales.
+               21020 ** - testbench.ff4 - Salidas q y qb son iguales.
+               21020 ** - testbench.ff0 - Salidas q y qb son iguales.
+               21021 ** - testbench.ff8 - Salidas q y qb son iguales.
+               21040 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               21041 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               21041 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               21066 ** - testbench.ff16 - Salidas q y qb son iguales.
+               21086 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               21086 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en r(22000)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en s(23000)= 1.
+** - Salidas correctas q=1 y qb=0.
+               23020 ** - testbench.ff16 - Salidas q y qb son iguales.
+               23020 ** - testbench.ff8 - Salidas q y qb son iguales.
+               23020 ** - testbench.ff0 - Salidas q y qb son iguales.
+               23021 ** - testbench.ff4 - Salidas q y qb son iguales.
+               23040 ** - testbench.ff0 - Tiempo de propagacion de set a q: 40
+               23040 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               23041 ** - testbench.ff8 - Tiempo de propagacion de set a q: 41
+               23041 ** - testbench.ff4 - Tiempo de propagacion de set a q: 41
+               23041 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               23041 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               23066 ** - testbench.ff12 - Salidas q y qb son iguales.
+               23086 ** - testbench.ff16 - Tiempo de propagacion de set a q: 86
+               23086 ** - testbench.ff12 - Tiempo de propagacion de set a q: 86
+               23086 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               23086 ** - testbench.ff12 - Salidas q y qb son complementarias.
+** - Cambio en s(24000)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en r(26000)= 1.
+** - Salidas correctas q=0 y qb=1.
+               26020 ** - testbench.ff12 - Salidas q y qb son iguales.
+               26020 ** - testbench.ff4 - Salidas q y qb son iguales.
+               26020 ** - testbench.ff0 - Salidas q y qb son iguales.
+               26021 ** - testbench.ff8 - Salidas q y qb son iguales.
+               26040 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               26041 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               26041 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               26066 ** - testbench.ff16 - Salidas q y qb son iguales.
+               26086 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               26086 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en s(29481)= 1.
+** - Salidas q y qb ambas a 0.
+               29501 ** - testbench.ff16 - Salidas q y qb son iguales.
+               29501 ** - testbench.ff8 - Salidas q y qb son iguales.
+               29501 ** - testbench.ff0 - Salidas q y qb son iguales.
+               29502 ** - testbench.ff4 - Salidas q y qb son iguales.
+               29547 ** - testbench.ff12 - Salidas q y qb son iguales.
+** - Cambio en r(30481)= 0.
+** - Salidas correctas q=1 y qb=0.
+               30501 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               30501 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               30501 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               30502 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               30547 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en s(31481)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en s(32481)= 1.
+** - Salidas correctas q=1 y qb=0.
+** - Cambio en r(33481)= 1.
+** - Salidas q y qb ambas a 0.
+               33501 ** - testbench.ff12 - Salidas q y qb son iguales.
+               33501 ** - testbench.ff4 - Salidas q y qb son iguales.
+               33501 ** - testbench.ff0 - Salidas q y qb son iguales.
+               33502 ** - testbench.ff8 - Salidas q y qb son iguales.
+               33547 ** - testbench.ff16 - Salidas q y qb son iguales.
+** - Cambio en s(34481)= 0.
+** - Salidas correctas q=0 y qb=1.
+               34501 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               34501 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               34501 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               34502 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               34547 ** - testbench.ff12 - Salidas q y qb son complementarias.
+** - Cambio en r(35481)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en s(37481)= 1 y r(37481)= 1.
+** - Salidas q y qb ambas a 0.
+               37501 ** - testbench.ff16 - Salidas q y qb son iguales.
+               37501 ** - testbench.ff8 - Salidas q y qb son iguales.
+               37501 ** - testbench.ff0 - Salidas q y qb son iguales.
+               37502 ** - testbench.ff4 - Salidas q y qb son iguales.
+               37547 ** - testbench.ff12 - Salidas q y qb son iguales.
+** - Cambio en s(38481)= 0 y r(38481)= 0.
+** - Salidas q y qb pueden oscilar.
+               38501 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               38501 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               38501 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               38501 ** - testbench.ff8 - Salidas q y qb son complementarias.
+** - Cambio en r(39481)= 1.
+** - Salidas correctas q=0 y qb=1.
+               39501 ** - testbench.ff12 - Salidas q y qb son iguales.
+               39501 ** - testbench.ff4 - Salidas q y qb son iguales.
+               39501 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               39522 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               39567 ** - testbench.ff12 - Salidas q y qb son complementarias.
+** - Cambio en s(40481)= 1 y r(40481)= 0.
+** - Salidas correctas q=1 y qb=0.
+               40501 ** - testbench.ff16 - Salidas q y qb son iguales.
+               40501 ** - testbench.ff8 - Salidas q y qb son iguales.
+               40501 ** - testbench.ff0 - Salidas q y qb son iguales.
+               40502 ** - testbench.ff4 - Salidas q y qb son iguales.
+               40521 ** - testbench.ff0 - Tiempo de propagacion de set a q: 40
+               40521 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               40522 ** - testbench.ff8 - Tiempo de propagacion de set a q: 41
+               40522 ** - testbench.ff4 - Tiempo de propagacion de set a q: 41
+               40522 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               40522 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               40547 ** - testbench.ff12 - Salidas q y qb son iguales.
+               40567 ** - testbench.ff16 - Tiempo de propagacion de set a q: 86
+               40567 ** - testbench.ff12 - Tiempo de propagacion de set a q: 86
+               40567 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               40567 ** - testbench.ff12 - Salidas q y qb son complementarias.
+** - Cambio en s(41481)= 0 y r(41481)= 1.
+** - Salidas correctas q=0 y qb=1.
+               41501 ** - testbench.ff12 - Salidas q y qb son iguales.
+               41501 ** - testbench.ff4 - Salidas q y qb son iguales.
+               41501 ** - testbench.ff0 - Salidas q y qb son iguales.
+               41502 ** - testbench.ff8 - Salidas q y qb son iguales.
+               41521 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               41522 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               41522 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               41547 ** - testbench.ff16 - Salidas q y qb son iguales.
+               41567 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               41567 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en r(42481)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en s(44481)= 1 y r(44481)= 1.
+** - Salidas q y qb ambas a 0.
+               44501 ** - testbench.ff16 - Salidas q y qb son iguales.
+               44501 ** - testbench.ff8 - Salidas q y qb son iguales.
+               44501 ** - testbench.ff0 - Salidas q y qb son iguales.
+               44502 ** - testbench.ff4 - Salidas q y qb son iguales.
+               44547 ** - testbench.ff12 - Salidas q y qb son iguales.
+** - Cambio en s(45481)= 0 y r(45481)= 0.
+** - Salidas q y qb pueden oscilar.
+               45501 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               45501 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               45501 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               45501 ** - testbench.ff8 - Salidas q y qb son complementarias.
+** - Cambio en s(46481)= 1.
+** - Salidas correctas q=1 y qb=0.
+               46501 ** - testbench.ff0 - Tiempo de propagacion de set a q: 20
+               46501 ** - testbench.ff16 - Salidas q y qb son iguales.
+               46501 ** - testbench.ff8 - Salidas q y qb son iguales.
+               46501 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               46522 ** - testbench.ff8 - Tiempo de propagacion de set a q: 41
+               46522 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               46567 ** - testbench.ff16 - Tiempo de propagacion de set a q: 86
+               46567 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en s(47481)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en r(48481)= 1.
+** - Salidas correctas q=0 y qb=1.
+               48501 ** - testbench.ff12 - Salidas q y qb son iguales.
+               48501 ** - testbench.ff4 - Salidas q y qb son iguales.
+               48501 ** - testbench.ff0 - Salidas q y qb son iguales.
+               48502 ** - testbench.ff8 - Salidas q y qb son iguales.
+               48521 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               48522 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               48522 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               48547 ** - testbench.ff16 - Salidas q y qb son iguales.
+               48567 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               48567 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en r(49481)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en s(50481)= 1.
+** - Salidas correctas q=1 y qb=0.
+               50501 ** - testbench.ff16 - Salidas q y qb son iguales.
+               50501 ** - testbench.ff8 - Salidas q y qb son iguales.
+               50501 ** - testbench.ff0 - Salidas q y qb son iguales.
+               50502 ** - testbench.ff4 - Salidas q y qb son iguales.
+               50521 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               50522 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               50522 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               50547 ** - testbench.ff12 - Salidas q y qb son iguales.
+               50567 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               50567 ** - testbench.ff12 - Salidas q y qb son complementarias.
+** - Cambio en s(51481)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en r(53481)= 1.
+** - Salidas correctas q=0 y qb=1.
+               53501 ** - testbench.ff12 - Salidas q y qb son iguales.
+               53501 ** - testbench.ff4 - Salidas q y qb son iguales.
+               53501 ** - testbench.ff0 - Salidas q y qb son iguales.
+               53502 ** - testbench.ff8 - Salidas q y qb son iguales.
+               53521 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               53522 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               53522 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               53547 ** - testbench.ff16 - Salidas q y qb son iguales.
+               53567 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               53567 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en s(56001)= 1.
+** - Salidas q y qb ambas a 0.
+               56021 ** - testbench.ff16 - Salidas q y qb son iguales.
+               56021 ** - testbench.ff8 - Salidas q y qb son iguales.
+               56021 ** - testbench.ff0 - Salidas q y qb son iguales.
+               56022 ** - testbench.ff4 - Salidas q y qb son iguales.
+               56067 ** - testbench.ff12 - Salidas q y qb son iguales.
+** - Cambio en r(57001)= 0.
+** - Salidas correctas q=1 y qb=0.
+               57021 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               57021 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               57021 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               57022 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               57067 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en s(58001)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en s(59001)= 1.
+** - Salidas correctas q=1 y qb=0.
+** - Cambio en r(60001)= 1.
+** - Salidas q y qb ambas a 0.
+               60021 ** - testbench.ff12 - Salidas q y qb son iguales.
+               60021 ** - testbench.ff4 - Salidas q y qb son iguales.
+               60021 ** - testbench.ff0 - Salidas q y qb son iguales.
+               60022 ** - testbench.ff8 - Salidas q y qb son iguales.
+               60067 ** - testbench.ff16 - Salidas q y qb son iguales.
+** - Cambio en s(61001)= 0.
+** - Salidas correctas q=0 y qb=1.
+               61021 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               61021 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               61021 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               61022 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               61067 ** - testbench.ff12 - Salidas q y qb son complementarias.
+** - Cambio en r(62001)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en s(64001)= 1 y r(64001)= 1.
+** - Salidas q y qb ambas a 0.
+               64021 ** - testbench.ff16 - Salidas q y qb son iguales.
+               64021 ** - testbench.ff8 - Salidas q y qb son iguales.
+               64021 ** - testbench.ff0 - Salidas q y qb son iguales.
+               64022 ** - testbench.ff4 - Salidas q y qb son iguales.
+               64067 ** - testbench.ff12 - Salidas q y qb son iguales.
+** - Cambio en s(65001)= 0 y r(65001)= 0.
+** - Salidas q y qb pueden oscilar.
+               65021 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               65021 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               65021 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               65021 ** - testbench.ff8 - Salidas q y qb son complementarias.
+** - Cambio en r(66001)= 1.
+** - Salidas correctas q=0 y qb=1.
+               66021 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               66021 ** - testbench.ff12 - Salidas q y qb son iguales.
+               66021 ** - testbench.ff4 - Salidas q y qb son iguales.
+               66042 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               66087 ** - testbench.ff12 - Salidas q y qb son complementarias.
+** - Cambio en s(67001)= 1 y r(67001)= 0.
+** - Salidas correctas q=1 y qb=0.
+               67021 ** - testbench.ff16 - Salidas q y qb son iguales.
+               67021 ** - testbench.ff8 - Salidas q y qb son iguales.
+               67021 ** - testbench.ff0 - Salidas q y qb son iguales.
+               67022 ** - testbench.ff4 - Salidas q y qb son iguales.
+               67041 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               67042 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               67042 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               67067 ** - testbench.ff12 - Salidas q y qb son iguales.
+               67087 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               67087 ** - testbench.ff12 - Salidas q y qb son complementarias.
+** - Cambio en s(68001)= 0 y r(68001)= 1.
+** - Salidas correctas q=0 y qb=1.
+               68021 ** - testbench.ff12 - Salidas q y qb son iguales.
+               68021 ** - testbench.ff4 - Salidas q y qb son iguales.
+               68021 ** - testbench.ff0 - Salidas q y qb son iguales.
+               68022 ** - testbench.ff8 - Salidas q y qb son iguales.
+               68041 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               68042 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               68042 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               68067 ** - testbench.ff16 - Salidas q y qb son iguales.
+               68087 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               68087 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en r(69001)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en s(71001)= 1 y r(71001)= 1.
+** - Salidas q y qb ambas a 0.
+               71021 ** - testbench.ff16 - Salidas q y qb son iguales.
+               71021 ** - testbench.ff8 - Salidas q y qb son iguales.
+               71021 ** - testbench.ff0 - Salidas q y qb son iguales.
+               71022 ** - testbench.ff4 - Salidas q y qb son iguales.
+               71067 ** - testbench.ff12 - Salidas q y qb son iguales.
+** - Cambio en s(72001)= 0 y r(72001)= 0.
+** - Salidas q y qb pueden oscilar.
+               72021 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               72021 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               72021 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               72021 ** - testbench.ff8 - Salidas q y qb son complementarias.
+** - Cambio en s(73001)= 1.
+** - Salidas correctas q=1 y qb=0.
+               73021 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               73021 ** - testbench.ff16 - Salidas q y qb son iguales.
+               73021 ** - testbench.ff8 - Salidas q y qb son iguales.
+               73042 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               73087 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en s(74001)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en r(75001)= 1.
+** - Salidas correctas q=0 y qb=1.
+               75021 ** - testbench.ff12 - Salidas q y qb son iguales.
+               75021 ** - testbench.ff4 - Salidas q y qb son iguales.
+               75021 ** - testbench.ff0 - Salidas q y qb son iguales.
+               75022 ** - testbench.ff8 - Salidas q y qb son iguales.
+               75041 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               75042 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               75042 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               75067 ** - testbench.ff16 - Salidas q y qb son iguales.
+               75087 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               75087 ** - testbench.ff16 - Salidas q y qb son complementarias.
+** - Cambio en r(76001)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en s(77001)= 1.
+** - Salidas correctas q=1 y qb=0.
+               77021 ** - testbench.ff16 - Salidas q y qb son iguales.
+               77021 ** - testbench.ff8 - Salidas q y qb son iguales.
+               77021 ** - testbench.ff0 - Salidas q y qb son iguales.
+               77022 ** - testbench.ff4 - Salidas q y qb son iguales.
+               77041 ** - testbench.ff0 - Tiempo de propagacion de set a q: 40
+               77041 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               77042 ** - testbench.ff8 - Tiempo de propagacion de set a q: 41
+               77042 ** - testbench.ff4 - Tiempo de propagacion de set a q: 41
+               77042 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               77042 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               77067 ** - testbench.ff12 - Salidas q y qb son iguales.
+               77087 ** - testbench.ff16 - Tiempo de propagacion de set a q: 86
+               77087 ** - testbench.ff12 - Tiempo de propagacion de set a q: 86
+               77087 ** - testbench.ff16 - Salidas q y qb son complementarias.
+               77087 ** - testbench.ff12 - Salidas q y qb son complementarias.
+** - Cambio en s(78001)= 0.
+** - Salidas q y qb mantienen valor anterior.
+** - Cambio en r(80001)= 1.
+** - Salidas correctas q=0 y qb=1.
+               80021 ** - testbench.ff12 - Salidas q y qb son iguales.
+               80021 ** - testbench.ff4 - Salidas q y qb son iguales.
+               80021 ** - testbench.ff0 - Salidas q y qb son iguales.
+               80022 ** - testbench.ff8 - Salidas q y qb son iguales.
+               80041 ** - testbench.ff0 - Salidas q y qb son complementarias.
+               80042 ** - testbench.ff4 - Salidas q y qb son complementarias.
+               80042 ** - testbench.ff8 - Salidas q y qb son complementarias.
+               80067 ** - testbench.ff16 - Salidas q y qb son iguales.
+               80087 ** - testbench.ff12 - Salidas q y qb son complementarias.
+               80087 ** - testbench.ff16 - Salidas q y qb son complementarias.

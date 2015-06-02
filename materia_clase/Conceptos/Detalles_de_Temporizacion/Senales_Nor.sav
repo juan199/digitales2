@@ -1,0 +1,47 @@
+[timestart] 0
+[size] 1598 983
+[pos] -132 -146
+*-15.966778 300 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] BancoPruebas.
+[treeopen] BancoPruebas.circ.
+[treeopen] BancoPruebas.circ.g6.
+@200
+-Compuertas NOR
+-Estructural
+@28
+BancoPruebas.s
+BancoPruebas.r
+@200
+-
+@28
+BancoPruebas.Pr
+BancoPruebas.PrBf
+BancoPruebas.udp
+@200
+-
+-Compuertas NOR
+-Conductual
+-Asignacion Continua
+@28
+BancoPruebas.s
+BancoPruebas.r
+BancoPruebas.Pr
+BancoPruebas.PrAs
+@200
+-
+-Asig. Block
+@28
+BancoPruebas.s
+BancoPruebas.r
+BancoPruebas.Pr
+BancoPruebas.Blk
+BancoPruebas.BlkSn
+@200
+-
+-Asig. No-Block
+@28
+BancoPruebas.s
+BancoPruebas.r
+BancoPruebas.Pr
+BancoPruebas.nBlk
+BancoPruebas.nBlkSn

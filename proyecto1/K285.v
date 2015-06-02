@@ -6,26 +6,40 @@ module K285(
 	output reg RXVALID
 );
 
+//1. CHECK SIEMPRE ESTA EN 0 -.- Y NI PUTA IDEA PORQUE
+//2. HAY QUE RESETEAR EL CONTADOR APENAS HAYA UN POSEDGE RXVALID Y COMO ES WIRE SE DESMADRA
+
+
 
 wire [3:0] Q;
 wire rst;
 wire check;
-assign rst = SYMBOL_CLK | Reset;
 
 UP_COUNTER count(rst, CRCLK, Q);
 
-assign rst =1;
+initial begin
+RXVALID = 0;
 
-assign check = ~data_in[9] & ~data_in[8] & data_in[7] & data_in[6] & data_in[5] & data_in[4] & ~data_in[3] & data_in[2] & ~data_in[1] & data_in[1] ||
-               data_in[9] & data_in[8] & ~data_in[7] & ~data_in[6] & ~data_in[5] & ~data_in[4] & data_in[3] & ~data_in[2] & data_in[1] & ~data_in[1];
+end
 
-assign SYMBOL_CLK = check | (Q[0] & ~Q[1] & ~Q[2] & Q[3]);
+assign rst = (SYMBOL_CLK | Reset); //| check; sera aca?? para resetear el cont
 
-//always @(posedge CRCLK) begin
+assign check = (~data_in[9] & ~data_in[8] & data_in[7] & data_in[6] & data_in[5] & data_in[4] & ~data_in[3] & data_in[2] & ~data_in[1] & data_in[1]) | (data_in[9] & data_in[8] & ~data_in[7] & ~data_in[6] & ~data_in[5] & ~data_in[4] & data_in[3] & ~data_in[2] & data_in[1] & ~data_in[1]);
+
+assign SYMBOL_CLK = ( check | (Q[0] & ~Q[1] & ~Q[2] & Q[3]) ) &  RXVALID; //TRIGGER IF VALID?
 
 
+
+always @(posedge check) begin // SI K28.5 DETECTADO => VALIDO
+
+ RXVALID = 1;  //rst =1;     //SE RESETEA COUNTADOR GUILLE HELP!!!!!
    
+end
 
-//end
+always @(posedge Reset) begin  // SI RESET DETECTADO => INVALIDO VIENE BASURA, NO ESTAMOS SINCRONIZADOS
+
+ RXVALID = 0;
+   
+end
 
 endmodule

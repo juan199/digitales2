@@ -1,0 +1,22 @@
+Tarea #4
+Contador con Primitivas de Xilinx
+(Entregar viernes 21 de octubre del 2011)
+
+Construya dos contadores de 16 bits a partir de las primitivas de Xilinx que se indican abajo y que tenga la siguiente interfaz:
+
+module cont_3sec (
+   output q[15:0],
+   input d[15:0],
+   input crtl[1:0],
+   input clk)
+
+El contador tiene 4 modos de funcionamiento definido por la señal de control crtl y el flanco positivo de clk.
+
+crtl=00 - El contador se carga con la entrada d. (q <= d)
+crtl=01 - El contador cuenta hacia arriba. (q <= q + 1)
+crtl=10 - El contador cuenta hacia abajo. (q <= q - 1)
+crtl=11 - El contador cuenta hacia arriba de dos en dos. (q <= q + 2)
+
+1) (50 puntos) Construya un contador usando las primitivas FDCE.v y LUT4.v que se encuentran en la pagina del curso bajo root> FPGA> Xilinx_Lib.
+
+2) (50 puntos) Construya un contador usando las primitivas X_FF.v y X_LUT4.v que se encuentran en la pagina del curso bajo root> FPGA> Xilinx_Lib.

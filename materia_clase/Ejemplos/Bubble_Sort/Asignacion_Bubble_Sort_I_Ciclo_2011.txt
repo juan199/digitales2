@@ -1,0 +1,75 @@
+Proyecto #2 - Bubble Sort
+
+A nivel de RTL armar un dispositivo para hacer el algortimo de bubble sort sobre un arreglo de 16 posiciones de 32 bits.
+  a) Sección de modificación de datos ("Data Path")
+  b) Controlador -- se van a hacer dos versiones del controlador.
+
+Cronograma:
+  1) Semana del 23 de mayo: Pasos 1) y 2), ver abajo.
+  2) Semana del 30 de mayo: Pasos 3) y 4), ver abajo.
+  3) Lunes 6 de junio - Presentación en clase.
+
+Pasos a seguir:
+1) Convertir el algoritmo a una máquina de estados tipo Moore. La descripción en verilog debería tener únicamente dos "always" para describir: a) el registro de estado, y b) la lógica combinacional.
+
+Es decir, viendo el ejemplo del divisor, pasar de:
+  wait (go);
+  done = 0;
+  divisor = dvInput;
+  dividend = ddInput;
+  quotient = 0;
+  if (divisor)
+    begin
+      negDivisor = divisor[`DvLen];
+      if (negDivisor)
+        divisor = - divisor;
+      ...
+
+a esto:
+always @(EstPresente or go)
+  begin
+    case(EstPresente)
+      ESTADO_0: begin
+        done <= 1;
+        if (go) begin
+          divisor <= dvInput;
+          dividend <= ddInput;
+          quotient <= 0;
+          ProximoEst <= ESTADO_1;
+          end
+        else
+          ProximoEst <= ESTADO_0;
+      end
+
+      ESTADO_1: begin
+        done <= 0;
+        if (divisor) begin
+          negDivisor <= divisor[`DvLen];
+      ...
+
+
+2) Sacar la "Tabla de Transferencias a Registros" para la descripción del Bubble Sort.
+
+3) Pasar la descripción en verilog del Bubble Sort a otra descripción donde se tiene por separado la descripción de la máquina de estados y la descripción de los registros individuales que usa el Bubble Sort. En este caso la descripción de la máquina de estados para el ejemplo del divisor se vería de la siguiente forma:
+
+always @(EstPresente or go or Cont16NoCero or divisorNoCero)
+begin
+case(EstPresente)
+ESTADO_0: begin
+  Est <= 8'b00000001;
+  if (go)
+    ProximoEst <= ESTADO_1;
+  else
+    ProximoEst <= ESTADO_0;
+  end
+
+ESTADO_1: begin
+  Est <= 8'b00000010;
+  if (divisorNoCero)
+    ProximoEst <= ESTADO_2;
+  else
+    ProximoEst <= ESTADO_7;
+  end
+      ...
+
+4) Cambiar el controlador (la máquina de estados) por uno de los siguientes tipos de controlador: a) un flip flop por estado (one-hot), b) Richards, o c) microprogramado (10/100 puntos extra de la nota).

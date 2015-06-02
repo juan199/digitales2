@@ -1,0 +1,33 @@
+[size] 1432 600
+[pos] -133 -174
+*-14.011034 2021 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+@28
+testbench.g
+testbench.s
+testbench.r
+@200
+-
+@28
+testbench.q_ET_bal
+testbench.qb_ET_bal
+@200
+-
+@28
+testbench.q_ET_Ta21
+testbench.qb_ET_Ta21
+@200
+-
+@28
+testbench.q_ET_Ta66
+testbench.qb_ET_Ta66
+@200
+-
+@28
+testbench.q_ET_Tb21
+@29
+testbench.qb_ET_Tb21
+@200
+-
+@28
+testbench.q_ET_Tb66
+testbench.qb_ET_Tb66

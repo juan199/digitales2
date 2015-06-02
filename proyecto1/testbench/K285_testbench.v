@@ -6,7 +6,7 @@ wire RX;
 wire CLK;
 reg reset;
 
-clock CLK1(CLK);
+trans_clock CLK1(CLK);
 K285 test(CLK, INP, reset, SCLK, RX);
 
 integer i;
@@ -20,16 +20,35 @@ begin
     #1 reset =1;
      #15 reset =0; 
 	#1	INP = 10'd35;
-	#100 INP = 10'd245;
+	
+	#15 INP = 10'b0011110101; //K28.5
+	#100;
+	
 	
 
-		for(i = 0; i < 1000; i = i+1)
+		for(i = 0; i < 100; i = i+1)
 		begin 
 		#7 INP = INP +1;
 		end
 		
+	#1 reset =1;
+    #15 reset =0; 
+	#1 INP = 10'd35;  //BASURA
+	
+	   for(i = 0; i < 200; i = i+1)
+		begin 
+		#7 INP = INP +1;
+		end
+	
+	#15 INP = 10'b1100001010;  //K28.5
+	#100;
+	
+		for(i = 0; i < 100; i = i+1)
+		begin 
+		#7 INP = INP +1;
+		end
     
-   #1000 $finish;
+   #10 $finish;
 end
 
 endmodule

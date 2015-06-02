@@ -1,0 +1,30 @@
+//Set Reset
+//Cambiando un bit
+01
+11
+10
+00
+10
+11
+01
+00
+//Cambiando dos bits
+00
+11
+00
+01
+10
+01
+00
+//Diferentes entradas separadas por 00
+00
+11
+00
+10
+00
+01
+00
+10
+00
+00
+01

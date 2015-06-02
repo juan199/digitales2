@@ -1,0 +1,12 @@
+// Circuitos Digitales II
+// Marco V. Chacon Taylor, Roberto Herrera, Robert Quiros
+// Proyecto No 3. Multiplicador/Divisor
+
+cascara.v
+regist_ctrl.v
+ALU.v
+controlador.v		  
+bancoPruebas.v	
+clk.v
+mult_div_ideal.v
+probador.v

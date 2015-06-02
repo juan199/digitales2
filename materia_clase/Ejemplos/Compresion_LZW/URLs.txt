@@ -1,0 +1,6 @@
+Buen artículo con ejemplos y discusión de las estructuras de datos
+Posted in October 1st, 1989 by Mark Nelson in Data Compression, Magazine Articles, Dr. Dobb's Journal
+http://marknelson.us/1989/10/01/lzw-data-compression/
+
+Versión actualizada del artículo de Mark Nelson, arriba.
+http://marknelson.us/2011/11/08/lzw-revisited/

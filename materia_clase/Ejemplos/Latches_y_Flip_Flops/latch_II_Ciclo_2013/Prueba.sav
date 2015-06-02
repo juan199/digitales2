@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.39 (w)1999-2012 BSI
+[*] Sat Aug 31 02:30:45 2013
+[*]
+[dumpfile] "C:\Users\Randy\Dropbox\Cursos de Digitales\Circuitos Digitales II - IE0523\LatchD\Simulacion.vcd"
+[savefile] "C:\Users\Randy\Dropbox\Cursos de Digitales\Circuitos Digitales II - IE0523\LatchD\Prueba.sav"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-17.491060 143000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TestBench.
+[sst_width] 211
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 154
+@28
+TestBench.Reset
+TestBench.Clock
+TestBench.D1
+TestBench.Q1
+TestBench.D2
+@29
+TestBench.Q2
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,73 @@
+#(tlh, thl, tz)
+
+#(1:4.5:6.8 , 1:3.3:4.5,  1:3.3:4.5)
+
+valor min, valor max, valor typ
+
+
+9:40am Viernes ------
+
+Tabla 7.6 o 7.7 tiene que ver conm los tiempos del Gate
+
+
+
+
+Vcc = 3.3V
+
+
+/////////////--MUX--/////////////
+
+~OE = output enable(estado bajo)
+S0, S1 (control de linea)
+A,B,C,D (Datos de input)
+O (output)
+
+
+
+TLH ( S -> B ) = (5.9n:1.5n:----)
+TLH ( ~OE -> B ) = (5.9n:1.5n:----)
+
+THL (S -> B ) = (6.1n:1n:---)
+THL ( ~OE -> B ) = (6.1n:1n:----)
+
+Tpd (A -> B ) (0.18n:----:----)
+
+
+
+(max:min:typ)
+
+TLH: (    :    :    )
+
+THL: (   :    :     )
+
+
+
+/////////////--NAND--/////////////
+
+
+TLH: (    :    :    )
+
+THL: (   :    :     )
+
+Ttyp: (   :    :    )
+
+////////////--INV--/////////////
+
+
+TLH: (    :    :    )
+
+THL: (   :    :     )
+
+Ttyp: (   :    :    )
+
+///////////--LATCH--/////////////
+
+TLH: (    :    :    )
+
+THL: (   :    :     )
+
+Ttyp: (   :    :    )
+
+Tsetup =
+
+Thold = 
