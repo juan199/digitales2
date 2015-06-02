@@ -28,10 +28,10 @@ ET: 4h               |                        |  working:      no
 encoder              |   Sebas                |  definition:   yes
 ET: 5h               |                        |  working:      yes
                      |                        |  testing:      yes
-                     |                        |  ready to use: no
+                     |                        |  ready to use: yes
 ---------------------------------------------------------------------
 decoder              |   Sebas                |  definition:   yes
-ET: 15h              |                        |  working:      no
+ET: 15h              |                        |  working:      yes
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
@@ -58,7 +58,7 @@ ET: 10h              |                        |  working:      no
 transmitter          |   unassigned           |  definition:   yes
 ET: 20h              |                        |  working:      yes
                      |                        |  testing:      yes
-                     |                        |  ready to use: no
+                     |                        |  ready to use: yes
 ---------------------------------------------------------------------
 receiver             |   unassigned           |  definition:   no
 ET: 25h              |                        |  working:      no
@@ -77,12 +77,12 @@ ET: 25h              |                        |  working:      no
 Transmitter dependence list
 module               |     Status         |  Time to "Ready to use"
 ===================================================================
-encode               |   working          |         ?
+encode               |   working          |         0
 par2ser              |   working          |         0
 TX_I_O               |   working          |         0
-transmitter          |   working          |         5
+transmitter          |   working          |         0
 -------------------------------------------------------------------
-                         Total remaining  |         5  
+                         Total remaining  |         0  
  
 
 Receiver dependence list
@@ -102,12 +102,12 @@ receiver             |   no initiated     |        25
 PIPE dependence list
 module               |     Status         |  Time to "Ready to use"
 ===================================================================
-transmitter          |   working          |          5
+transmitter          |   working          |          0
 receiver             |   working          |         89
 power_manager        |   working          |         10
 PIPE                 |   working          |         25
 -------------------------------------------------------------------
-                         Total remaining  |        129
+                         Total remaining  |        124
                            
 
 

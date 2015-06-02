@@ -47,33 +47,22 @@ endmodule
 // Sub-bloque eléctrico del transmisor
 
 module TX_I_O(
-	input wire TRANSCLK,
-	input wire data,
-	input wire TXIDLE,
-	input wire RXDET,
-	output reg RXDET_O,
-	output reg TX_P,
-	output reg TX_N
+	input wire  TRANSCLK,
+	input wire  data,
+	input wire  TXIDLE,
+	input wire  RXDET,
+	output reg  RXDET_O,
+	output wire TX_P,
+	output wire TX_N
 );
 
 	reg tmp;
-
+	
+	assign TX_P = TXIDLE ? 1'b1 : data;
+	assign TX_N = TXIDLE ? 1'b1 : ~data;
+	
 	always @ (posedge TRANSCLK)
-	begin
-		tmp = $random;
-		if(TXIDLE)
-			begin
-			TX_P <= 1'b1;
-			TX_N <= 1'b1;
-			end
-		else
-			begin
-			TX_P <= data;
-			TX_N <= ~data;
-			end	
-		
 		RXDET_O <= #7 RXDET & tmp;
-	end
 
 endmodule
 

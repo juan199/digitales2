@@ -1,7 +1,7 @@
 `default_nettype none
 `timescale 1ns/100ps
 
-module Encoder (
+module encoder (
 	input wire 		 Reset,
 	input wire       INTERCLK,  // Internal clock
 	input wire [7:0] iData,     // Data input

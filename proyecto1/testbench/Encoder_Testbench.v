@@ -11,7 +11,7 @@ module test;
 	
 	assign Data = {S3,S5};
 	//Instantiate unit under test
-	Encoder  Enc(
+	encoder  Enc(
 		.Reset(Reset),
 		.INTERCLK(Clk),
 		.iData(Data),
