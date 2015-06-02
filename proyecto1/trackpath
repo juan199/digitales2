@@ -10,15 +10,15 @@ ET: 4h               |                        |  working:      yes
                      |                        |  testing:      yes
                      |                        |  ready to use: yes
 ---------------------------------------------------------------------
-clock_recovery       |   unassigned           |  definition:   yes
+clock_recovery       |   Guille           |  definition:   yes
 ET: 15h              |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
 K285DET              |   Nano                 |  definition:   yes
 ET: 5h               |                        |  working:      yes
-                     |                        |  testing:      no
-                     |                        |  ready to use: no
+                     |                        |  testing:      yes
+                     |                        |  ready to use: yes
 ---------------------------------------------------------------------
 status               |   unassigned           |  definition:   yes
 ET: 4h               |                        |  working:      no
@@ -45,7 +45,7 @@ ET: 4h               |                        |  working:      yes
                      |                        |  testing:      yes
                      |                        |  ready to use: yes
 ---------------------------------------------------------------------
-elastic_buffer       |   unassigned           |  definition:   yes
+elastic_buffer       |   Nano            |  definition:   yes
 ET: 25h              |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
@@ -94,20 +94,20 @@ elastic_buffer       |   working          |        25
 decoder              |   working          |        15
 status               |   no initiated     |         4
 clock_recovery       |   no initiated     |        15
-K285DET              |   working          |         5
+K285DET              |   working          |         0
 receiver             |   no initiated     |        25
 -------------------------------------------------------------------
-                         Total remaining  |        89
+                         Total remaining  |        84
                          
 PIPE dependence list
 module               |     Status         |  Time to "Ready to use"
 ===================================================================
 transmitter          |   working          |          0
-receiver             |   working          |         89
+receiver             |   working          |         84
 power_manager        |   working          |         10
 PIPE                 |   working          |         25
 -------------------------------------------------------------------
-                         Total remaining  |        124
+                         Total remaining  |        119
                            
 
 
