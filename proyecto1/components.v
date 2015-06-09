@@ -87,15 +87,6 @@ module RX_I_O(
 
 endmodule
 
-// Este es un PLL
-module clock_recovery(
-	input wire TRANSCLK,
-	input wire data,
-	output reg CRC_CKL
-);
-
-endmodule
-
 module K285DET(
 	input wire TRANSCLK,
 	input wire [9:0] data_in,

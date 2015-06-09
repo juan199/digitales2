@@ -2,6 +2,7 @@ encoder:
 	iverilog coder.v testbench/Encoder_Testbench.v -o encoder.vvp
 	vvp encoder.vvp
 	gtkwave testbench/encoder_wave.gtkw &
+	
 serdes:
 	iverilog serdes.v power_manager.v testbench/serdes_testbench.v -o serdes.vvp
 	vvp serdes.vvp
@@ -16,6 +17,9 @@ transmitter:
 	iverilog components.v coder.v serdes.v power_manager.v transmitter.v testbench/transmitter_testbench.v -o transmitter.vvp
 	vvp transmitter.vvp
 	gtkwave testbench/transmitter_wave.gtkw &
+	
+clock_recovery:
+	iverilog clock_recovery.v power_manager.v testbench/clock_recovery_testbench.v -o clock_recovery.vvp
 	
 clean:
 	rm *.vvp
