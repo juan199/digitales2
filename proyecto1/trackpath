@@ -10,8 +10,8 @@ ET: 4h               |                        |  working:      yes
                      |                        |  testing:      yes
                      |                        |  ready to use: yes
 ---------------------------------------------------------------------
-clock_recovery       |   Guille           |  definition:   yes
-ET: 15h              |                        |  working:      no
+clock_recovery       |   Guille               |  definition:   yes
+ET: 15h              |                        |  working:      yes
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
@@ -20,7 +20,7 @@ ET: 5h               |                        |  working:      yes
                      |                        |  testing:      yes
                      |                        |  ready to use: yes
 ---------------------------------------------------------------------
-status               |   unassigned           |  definition:   yes
+status               |   Sebas                |  definition:   yes
 ET: 4h               |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
@@ -45,8 +45,8 @@ ET: 4h               |                        |  working:      yes
                      |                        |  testing:      yes
                      |                        |  ready to use: yes
 ---------------------------------------------------------------------
-elastic_buffer       |   Nano            |  definition:   yes
-ET: 25h              |                        |  working:      no
+elastic_buffer       |   Nano                 |  definition:   yes
+ET: 25h              |                        |  working:      yes
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
@@ -55,7 +55,7 @@ ET: 10h              |                        |  working:      no
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
-transmitter          |   unassigned           |  definition:   yes
+transmitter          |   Guille               |  definition:   yes
 ET: 20h              |                        |  working:      yes
                      |                        |  testing:      yes
                      |                        |  ready to use: yes
@@ -77,10 +77,10 @@ ET: 25h              |                        |  working:      no
 Transmitter dependence list
 module               |     Status         |  Time to "Ready to use"
 ===================================================================
-encode               |   working          |         0
-par2ser              |   working          |         0
-TX_I_O               |   working          |         0
-transmitter          |   working          |         0
+encode               |   ready to use     |         0
+par2ser              |   ready to use     |         0
+TX_I_O               |   ready to use     |         0
+transmitter          |   ready to use     |         0
 -------------------------------------------------------------------
                          Total remaining  |         0  
  
@@ -88,13 +88,13 @@ transmitter          |   working          |         0
 Receiver dependence list
 module               |     Status         |  Time to "Ready to use"
 ===================================================================
-RX_I_O               |   working          |         0
-ser2par	             |   working          |         0
+RX_I_O               |   ready to use     |         0
+ser2par	             |   ready to use     |         0
 elastic_buffer       |   working          |        25
 decoder              |   working          |        15
 status               |   no initiated     |         4
 clock_recovery       |   no initiated     |        15
-K285DET              |   working          |         0
+K285DET              |   ready to use     |         0
 receiver             |   no initiated     |        25
 -------------------------------------------------------------------
                          Total remaining  |        84
@@ -108,26 +108,3 @@ power_manager        |   working          |         10
 PIPE                 |   working          |         25
 -------------------------------------------------------------------
                          Total remaining  |        119
-                           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                     
