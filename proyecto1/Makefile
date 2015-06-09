@@ -13,6 +13,9 @@ electrical:
 	vvp electrical.vvp
 	gtkwave testbench/electrical_wave.gtkw &
 	
+K285:
+	iverilog components.v power_manager.v K285.v testbench/K285_testbench.v -o K285.vvp
+	vvp K285.vvp
 transmitter:
 	iverilog components.v coder.v serdes.v power_manager.v transmitter.v testbench/transmitter_testbench.v -o transmitter.vvp
 	vvp transmitter.vvp
