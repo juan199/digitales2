@@ -227,8 +227,95 @@ module decoder(
 	input wire [9:0] iData,            // Data input
 	output reg       DECODE_ERROR,     // Report a decode error
 	output reg       DISPARITY_ERROR,  // Report a disparity error
-	output reg       RXDATAK,          // 0 = data byte, 1 = control byte. Check this out please!!
+	output reg       RXDATAK,          // 0 = data byte, 1 = control byte
 	output reg [7:0] oData             // Data output
 );
+	//Coded vector R6 
+	wire a = iData[9];
+	wire b = iData[8];
+	wire c = iData[7];
+	wire d = iData[6];
+	wire e = iData[5];
+	wire i = iData[4];
+	
+	//Coded vector R4
+	wire f = iData[3];
+	wire g = iData[2];
+	wire h = iData[1];
+	wire j = iData[0];
+	
+	wire P40 = a & b & c & d;
+	wire P04 = ~a & ~b & ~c & ~d;
+	wire P3X = a & b & c | a & b & d | a & c & d | b & c & d;
+	wire PX3 = ~a & ~b & ~c | ~a & ~b & ~d | ~a & ~c & ~d | ~b & ~c & ~d;
+	wire P22 = ~P3X & ~PX3;
+	
+	wire P2X = a & b | a & c | b & c;
+	wire PX2 = ~a & ~b | ~a & ~c | ~b & ~c;
+	
+	//Calculating A
+	wire n8 = ~a | ~b;
+	wire n0 = ~c & d & (e==i) & n8;
+	wire n1 = PX3 & (d & i | ~e);
+	wire n2 = a & b & e & i | ~c & ~d & ~e & ~i;
+	wire CMPLa = n0 | n1 | P3X & i | n2;
+	
+	//Calculating B
+	wire n3 = c & ~d & (e==i) & (a!=b);
+	wire CMPLb = n3 | n1 | P3X & i | n2;
+	
+	//Calculating C
+	wire n4 = ~a & b & (c!=d) & (e==i);
+	wire n5 = ~e & ~i &(~a & ~b | ~c & ~d)
+	wire CMPLc = n4 | n1 | P3X & i | n5;
+	
+	//Calculating D
+	wire n6 = a & ~b & (c!=d) & (e==i);
+	wire CMPLd = n6 | n1 | P3X & i | n2;
+	
+	//Calculating E
+	wire n7 = PX3 & (~e | ~i);
+	wire CMPLe = n0 | n7 | n5;
+	
+	//Calculating F
+	wire m0 = (f!=g) & h & j;
+	wire m7 = ~c & ~d & ~e & ~i & (h!=j);
+	wire CMPLf = m0 | (f==g) & j | m7;
+	
+	//Calculating G
+	wire CMPLg = (f!=g) & ~h & ~j | (f==g) & j | m7;
+	
+	//Calculating H
+	wire m2 = f & ~g & (h==j);
+	wire CMPLh = m2 | (f==g) & j | m7;
+	
+	//Complement each input letter if required	
+	wire A = a^CMPLa;
+	wire B = b^CMPLb;
+	wire C = c^CMPLc;
+	wire D = d^CMPLd;
+	wire E = e^CMPLe;
+	
+	wire F = f^CMPLf;
+	wire G = g^CMPLg;
+	wire H = h^CMPLh;
+	
+	//Control bit K
+	wire k28 = c & d & e & i | ~c & ~d & ~e & ~i;
+	wire kx7 = (e!=i) & (i & g & h & j | ~i & ~g & ~h & ~j);
+	wire K = k28 | kx7;
+	 
+	//Invalid Vectors
+	wire INVR6 = P40 | P04 | P3X & e & i | PX3 & ~e & ~i;
+
+	//Required Disparity
+	
+	//Previous Block Running Disparity
+	
+	//Disparity Violation
+	
+	//Assumed disparity
+	
+	//Sequential block
 
 endmodule
