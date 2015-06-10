@@ -1,3 +1,8 @@
+decoder:
+	iverilog coder.v testbench/Decoder_Testbench.v -o decoder.vvp
+	vvp decoder.vvp
+	gtkwave testbench/decoder_wave.gtkw &
+	
 encoder:
 	iverilog coder.v testbench/Encoder_Testbench.v -o encoder.vvp
 	vvp encoder.vvp

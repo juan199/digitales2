@@ -1,0 +1,47 @@
+[*]
+[*] GTKWave Analyzer v3.3.58 (w)1999-2014 BSI
+[*] Wed Jun 10 03:48:55 2015
+[*]
+[dumpfile] "/home/sebas/Documents/GIT/digitales2/proyecto1/decoder_dump.vco"
+[dumpfile_mtime] "Wed Jun 10 03:36:20 2015"
+[dumpfile_size] 313185
+[savefile] "/home/sebas/Documents/GIT/digitales2/proyecto1/testbench/decoder_wave.gtkw"
+[timestart] 9280
+[size] 1221 600
+[pos] -1 -1
+*-13.000000 26000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] test.
+[sst_width] 223
+[signals_width] 148
+[sst_expanded] 1
+[sst_vpaned_height] 160
+@28
+test.Clk
+test.Reset
+@24
+test.Enc.iS5[4:0]
+test.Enc.iS3[2:0]
+@28
+test.k
+test.DecK
+@24
+test.Data[7:0]
+test.DecData[7:0]
+@28
+test.EncData[9:0]
+test.DispErr
+test.DecErr
+test.TXCOMP
+@22
+test.verifier[7:0]
+@28
+test.Dec.PDRR4
+test.Dec.NDRR4
+test.Dec.PDRR6
+test.Dec.NDRR6
+test.Dec.PDFBY
+test.Dec.NDFBY
+@29
+test.Dec.CBRD[1:0]
+[pattern_trace] 1
+[pattern_trace] 0

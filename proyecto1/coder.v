@@ -87,7 +87,7 @@ module encoder (
 	output.*/
 	wire CMPLS6 = PBRD & PDRS6 | ~PBRD & NDRS6;
 	
-	//Exception for disparity rules: if input = D7.x and the 4 bit coded 
+	//Exception for disparity rules: if input = D7.x, and the 4 bit coded 
 	//input has a non neutral required disparity
 	wire DispException = L30 & ~D & ~E & (PDRS4 | NDRS4);
 	
@@ -140,11 +140,7 @@ module encoder (
 	//Output 10 bit coded vector
 	wire [9:0] S10; 
 	assign S10 = {oS6,oS4};
-	
-	//Set Current block required disparity  
-	/*wire [9:0] oS10; 
-	assign oS10 = (TXCOMP & CBRD)? ~S10:S10;
-*/
+
 /*----------------------------------------------------------------------
 					Sequential section
 ----------------------------------------------------------------------*/
@@ -266,7 +262,7 @@ module decoder(
 	
 	//Calculating C
 	wire n4 = ~a & b & (c!=d) & (e==i);
-	wire n5 = ~e & ~i &(~a & ~b | ~c & ~d)
+	wire n5 = ~e & ~i &(~a & ~b | ~c & ~d);
 	wire CMPLc = n4 | n1 | P3X & i | n5;
 	
 	//Calculating D
@@ -301,21 +297,63 @@ module decoder(
 	wire H = h^CMPLh;
 	
 	//Control bit K
+	wire m10 =i & g & h & j | ~i & ~g & ~h & ~j;
 	wire k28 = c & d & e & i | ~c & ~d & ~e & ~i;
-	wire kx7 = (e!=i) & (i & g & h & j | ~i & ~g & ~h & ~j);
+	wire kx7 = (e!=i) & m10;
 	wire K = k28 | kx7;
 	 
 	//Invalid Vectors
+	wire m5 = k28 & (f & g & h | ~f & ~g & ~h);
+	wire m6 = ~k28 & (g & h & j & ~i | ~g & ~h & ~j & i);
+	wire m3 = f & g & h & j | ~f & ~g & ~h & ~j;
+	wire m4 = e & i & f & g & h | ~e & ~i & ~f & ~g & ~h;
+	
+	wire VKX7 = m10 & (e^i) & P22; 
 	wire INVR6 = P40 | P04 | P3X & e & i | PX3 & ~e & ~i;
-
-	//Required Disparity
+	wire INVR4 = m3 | m4 | m5 | m6;
 	
-	//Previous Block Running Disparity
+	wire DecError = VKX7 | INVR4 | INVR6;//////////////////------------------------------------------
 	
-	//Disparity Violation
+	//Input Required Disparity
+	wire PDRR4 = ~f & ~g | (f^g) & ~h & ~j;
+	wire NDRR4 = f & g | m0;
+	
+	wire PDRR6 = PX3 & (~e | ~i) | ~a & ~b & ~c | ~e & ~i &(PX2 | ~d & ~(a & b & c));
+	wire NDRR6 = P3X & (e | i) | a & b & c | e & i & (P2X | d & (a | b | c));
 	
 	//Assumed disparity
+	wire PDUR4 = h & j | f & g &(h^j);
+	wire NDUR4 = ~h & ~j | ~f & ~g &(h^j);
+	
+	wire PDUR6 = P3X & (e | i) | e & i & (d | P2X);
+	wire NDUR6 = PX3 & (~e | ~i) | ~e & ~i & (~d | PX2);
+	
+	//Previous Block Running Disparity
+	reg PDFBY;
+	reg NDFBY;
+	
+	//Disparity Violation
+	wire DVBY = NDFBY & (PDRR6 | PDRR4 & ~NDRR6) + PDFBY & (NDRR6 | NDRR4 & ~PDRR6);
+	
+	//If there is a decode error the output should be a K30.7
+	wire [8:0] out;
+	assign out = (DecError)? {1'b1,3'd7,5'd30}:{K,H,G,F,E,D,C,B,A};
+	
+	//Current Block Running Disparity
+	//Remember!!!: This is running disparity, not required running disparity as in inputs
+	wire [1:0] CBRD;
+	assign CBRD [1] = NDRR6 | ~PDRR6 & ~NDRR6 & NDRR4; 
+	assign CBRD [0] = PDRR6 | ~PDRR6 & ~NDRR6 & PDRR4 ;///////////!!!!!!!!!!! maybe Missing disparity rule exceptions
 	
 	//Sequential block
-
+	always @(posedge INTERCLK)
+	begin
+		PDFBY <= CBRD [1];
+		NDFBY <= CBRD [0];
+		oData <= out[7:0];
+		RXDATAK <= out[8];
+		DECODE_ERROR <= DecError;
+		DISPARITY_ERROR <= DVBY;
+	end
+	
 endmodule
