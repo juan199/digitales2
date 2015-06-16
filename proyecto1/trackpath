@@ -21,7 +21,7 @@ ET: 5h               |                        |  working:      yes
                      |                        |  ready to use: yes
 ---------------------------------------------------------------------
 status               |   Sebas                |  definition:   yes
-ET: 4h               |                        |  working:      no
+ET: 4h               |                        |  working:      yes
                      |                        |  testing:      no
                      |                        |  ready to use: no
 ---------------------------------------------------------------------
@@ -32,8 +32,8 @@ ET: 5h               |                        |  working:      yes
 ---------------------------------------------------------------------
 decoder              |   Sebas                |  definition:   yes
 ET: 15h              |                        |  working:      yes
-                     |                        |  testing:      no
-                     |                        |  ready to use: no
+                     |                        |  testing:      yes
+                     |                        |  ready to use: yes
 ---------------------------------------------------------------------
 par2ser              |   Nano                 |  definition:   yes
 ET: 4h               |                        |  working:      yes
@@ -91,20 +91,20 @@ module               |     Status         |  Time to "Ready to use"
 RX_I_O               |   ready to use     |         0
 ser2par	             |   ready to use     |         0
 elastic_buffer       |   working          |        25
-decoder              |   working          |        15
+decoder              |   working          |         0
 status               |   no initiated     |         4
 clock_recovery       |   no initiated     |        15
 K285DET              |   ready to use     |         0
 receiver             |   no initiated     |        25
 -------------------------------------------------------------------
-                         Total remaining  |        84
+                         Total remaining  |        69
                          
 PIPE dependence list
 module               |     Status         |  Time to "Ready to use"
 ===================================================================
 transmitter          |   working          |          0
-receiver             |   working          |         84
+receiver             |   working          |         69
 power_manager        |   working          |         10
 PIPE                 |   working          |         25
 -------------------------------------------------------------------
-                         Total remaining  |        119
+                         Total remaining  |        104

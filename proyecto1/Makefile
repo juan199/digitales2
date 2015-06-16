@@ -28,6 +28,7 @@ transmitter:
 	
 clock_recovery:
 	iverilog clock_recovery.v power_manager.v testbench/clock_recovery_testbench.v -o clock_recovery.vvp
+	vvp clock_recovery.vvp
 	
 clean:
 	rm *.vvp
