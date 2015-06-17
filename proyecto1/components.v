@@ -97,15 +97,34 @@ module K285DET(
 endmodule
 
 module status(
-	input wire       BUFF_OVERFLOW,
+
 	input wire       SKP_ADDED,
 	input wire       SKP_REMOVED,
+	input wire       RXDET_O, /////////////Check!! It should be PhyStatus not RxDet_O
 	input wire       DECODE_ERROR,
+	input wire       BUFF_OVERFLOW,
+	input wire       BUFF_UNDERFLOW,
 	input wire       DISPARITY_ERROR,
-	input wire       RXDET_O,
 	output reg [2:0] RXSTATUS
 );
-
+	always @(*)
+		//in order of priority
+		if(RXDET_O) 
+			RXSTATUS = 3'b011;
+		else if(DECODE_ERROR)
+		    RXSTATUS = 3'b100;
+		else if(BUFF_OVERFLOW)   
+			RXSTATUS = 3'b101;
+		else if(BUFF_UNDERFLOW)  
+			RXSTATUS = 3'b110;
+		else if(DISPARITY_ERROR) 
+			RXSTATUS = 3'b111;
+		else if(SKP_ADDED) 		 
+			RXSTATUS = 3'b001;
+		else if(SKP_REMOVED) 	 
+			RXSTATUS = 3'b010;
+		else 		 
+			RXSTATUS = 3'b000;
 endmodule
 
 

@@ -1,0 +1,49 @@
+[*]
+[*] GTKWave Analyzer v3.3.58 (w)1999-2014 BSI
+[*] Wed Jun 17 03:43:40 2015
+[*]
+[dumpfile] "/home/sebas/Documents/GIT/digitales2/proyecto1/status_dump.vco"
+[dumpfile_mtime] "Wed Jun 17 03:35:28 2015"
+[dumpfile_size] 39362
+[savefile] "/home/sebas/Documents/GIT/digitales2/proyecto1/testbench/status_wave.gtkw"
+[timestart] 116360
+[size] 1000 600
+[pos] -1 -1
+*-13.000000 128000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 223
+[signals_width] 175
+[sst_expanded] 1
+[sst_vpaned_height] 160
+@24
+test.RXSTATUS[2:0]
+@200
+-Priority Ordered
+-3
+@28
+test.RXDET_O
+@200
+-4
+@28
+test.DECODE_ERROR
+@200
+-5
+@28
+test.BUFF_OVERFLOW
+@200
+-6
+@28
+test.BUFF_UNDERFLOW
+@200
+-7
+@28
+test.DISPARITY_ERROR
+@200
+-1
+@28
+test.SKP_ADDED
+@200
+-2
+@28
+test.SKP_REMOVED
+[pattern_trace] 1
+[pattern_trace] 0

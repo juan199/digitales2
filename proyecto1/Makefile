@@ -1,3 +1,8 @@
+status:
+	iverilog components.v testbench/Status_TestBench.v -o status.vvp
+	vvp status.vvp
+	gtkwave testbench/status_wave.gtkw &
+	
 decoder:
 	iverilog coder.v testbench/Decoder_Testbench.v -o decoder.vvp
 	vvp decoder.vvp

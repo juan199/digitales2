@@ -22,8 +22,8 @@ ET: 5h               |                        |  working:      yes
 ---------------------------------------------------------------------
 status               |   Sebas                |  definition:   yes
 ET: 4h               |                        |  working:      yes
-                     |                        |  testing:      no
-                     |                        |  ready to use: no
+                     |                        |  testing:      yes
+                     |                        |  ready to use: yes
 ---------------------------------------------------------------------
 encoder              |   Sebas                |  definition:   yes
 ET: 5h               |                        |  working:      yes
@@ -92,19 +92,19 @@ RX_I_O               |   ready to use     |         0
 ser2par	             |   ready to use     |         0
 elastic_buffer       |   working          |        25
 decoder              |   working          |         0
-status               |   no initiated     |         4
+status               |   ready to use     |         0
 clock_recovery       |   no initiated     |        15
 K285DET              |   ready to use     |         0
 receiver             |   no initiated     |        25
 -------------------------------------------------------------------
-                         Total remaining  |        69
+                         Total remaining  |        65
                          
 PIPE dependence list
 module               |     Status         |  Time to "Ready to use"
 ===================================================================
 transmitter          |   working          |          0
-receiver             |   working          |         69
+receiver             |   working          |         65
 power_manager        |   working          |         10
 PIPE                 |   working          |         25
 -------------------------------------------------------------------
-                         Total remaining  |        104
+                         Total remaining  |        100
