@@ -12,24 +12,24 @@ module clock_recovery(
 endmodule
 
 module phase_detector(
-	input wire  ref_clk,
-	input wire  vco_clk,
+	input wire  internal_clk,
+	input wire  external_clk,
 	output wire up,
 	output wire down
 );
 	wire rst;
 	assign rst = up & down;
 		
-	ffd_rst ref_ff(
+	ffd_rst internal_ff(
 		.D(1'b1),
-		.clk(ref_clk),
+		.clk(internal_clk),
 		.rst(rst),
 		.Q(up)
 	);
 
-	ffd_rst vco_ff(
+	ffd_rst external_ff(
 		.D(1'b1),
-		.clk(vco_clk),
+		.clk(external_clk),
 		.rst(rst),
 		.Q(down)
 	);
