@@ -63,11 +63,11 @@ module test;
 	always 
 	begin
 		#2 S3 = S3+1;
-		#254; 
+		#254;
 	end
 	always 
 	begin
 		#2 S5 = S5+1;
-		#6; 
+		#6;
 	end
 endmodule
