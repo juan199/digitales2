@@ -32,7 +32,7 @@ transmitter:
 	gtkwave testbench/transmitter_wave.gtkw &
 	
 clock_recovery:
-	iverilog clock_recovery.v power_manager.v testbench/clock_recovery_testbench.v -o clock_recovery.vvp
+	iverilog clock_recovery.v testbench/clock_recovery_testbench.v -o clock_recovery.vvp
 	vvp clock_recovery.vvp
 	
 clean:
